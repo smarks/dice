@@ -1,13 +1,10 @@
-# roll 4d get highest two
-import math
-
 from main import roll_dice
 from enum import Enum
 
 
 class BaseTypes(Enum):
-    MENTAL = 1
-    PHYSICAL = 2
+    MENTAL = "mental"
+    PHYSICAL = "physical"
 
 
 class RaceTypes(Enum):
@@ -23,27 +20,46 @@ class RaceTypes(Enum):
     GNOME = [4, 6, 0, 0]
 
 
+class Character:
+
+    def __init__(self, race, base_preference):
+        self.race = race
+        self.base_preference = base_preference
+        self.physical_base, self.mental_base, self.base_rolls = get_bases(race, base_preference)
+        self.strength_rolls, self.strength = roll_attribute(self.physical_base)
+        self.intelligence_rolls, self.intelligence = roll_attribute(self.mental_base)
+        self.wisdom_rolls, self.wisdom = roll_attribute(self.mental_base)
+        self.dexterity_rolls, self.dexterity = roll_attribute(self.physical_base)
+        self.constitution_rolls, self.constitution = roll_attribute(self.physical_base)
+        self.personality_modifier = self.physical_base if self.physical_base > self.mental_base else self.mental_base
+        self.personality_rolls, self.personality = roll_attribute(self.personality_modifier)
+
+    def __str__(self):
+        return (f"Character race: {self.race}  Base priority: {self.base_preference.value}\n"
+                f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )\n"
+                f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
+                f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
+                f"Wisdom: {self.wisdom} (rolls: {self.wisdom_rolls}) base: {self.mental_base}\n"
+                f"Dexterity: {self.dexterity} (rolls: {self.dexterity_rolls}) base: {self.physical_base}\n"
+                f"Constitution: {self.constitution} (rolls: {self.constitution_rolls}) base: {self.physical_base}\n"
+                f"Personality: {self.personality} (rolls: {self.personality_rolls}  base: {self.personality_modifier}\n")
+
+
 def get_bases(race=RaceTypes.HUMAN, base_preference=BaseTypes.PHYSICAL):
-    print(race)
     base = roll_dice(race.value[1], race.value[0])
     base.sort()
-    print(f"rolled: D{race.value[1]} {race.value[0]} times  {base} ")
 
     physical_modifier = race.value[2]
-    print(f"physical modifier: {physical_modifier}")
     mental_modifier = race.value[3]
-    print(f"mental modifier: {mental_modifier}")
     index_of_highest = len(base) - 1
     if base_preference == BaseTypes.PHYSICAL:
-        print("A higher physical base is preferred.")
         physical_base = base[index_of_highest] + physical_modifier
         mental_base = base[index_of_highest - 1] + mental_modifier
     else:
-        print("A higher mental base is preferred.")
         physical_base = base[index_of_highest] + physical_modifier
         mental_base = base[index_of_highest - 1] + mental_modifier
 
-    return physical_base, mental_base
+    return physical_base, mental_base, base
 
 
 def roll_attribute(base_modifier):
@@ -53,66 +69,21 @@ def roll_attribute(base_modifier):
 
 
 if __name__ == "__main__":
-    physical_base, mental_base = get_bases(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(f"Physical: {physical_base}")
-    print(f"Mental: {mental_base}")
-    strength_rolls, strength = roll_attribute(physical_base)
-    print(f"Strength: {strength} {strength_rolls}  + physical base {physical_base}")
-    intelligence_rolls, intelligence = roll_attribute(mental_base)
-    print(f"Intelligence: {intelligence} {intelligence_rolls} + mental base {mental_base}")
-    wisdom_rolls, wisdom = roll_attribute(mental_base)
-    print(f"Wisdom: {wisdom} {wisdom_rolls} + mental base {mental_base}")
-    dex_rolls, dex = roll_attribute(physical_base)
-    print(f"Dex: {dex} {dex_rolls} + physical base {physical_base}")
-    personality_modifier = physical_base if physical_base > mental_base else mental_base
-    personality_rolls, personality = roll_attribute(personality_modifier)
-    print(f"Per: {personality} {personality_rolls} + personality_modifier {personality_modifier}")
-    print("\n")
+    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print(elf)
     print("\n")
 
-    physical_base, mental_base = get_bases(RaceTypes.DWARF, BaseTypes.PHYSICAL)
-    print(f"Physical: {physical_base}")
-    print(f"Mental: {mental_base}")
-    strength_rolls, strength = roll_attribute(physical_base)
-    print(f"Strength: {strength} {strength_rolls}  + physical base {physical_base}")
-    intelligence_rolls, intelligence = roll_attribute(mental_base)
-    print(f"Intelligence: {intelligence} {intelligence_rolls} + mental base {mental_base}")
-    wisdom_rolls, wisdom = roll_attribute(mental_base)
-    print(f"Wisdom: {wisdom} {wisdom_rolls} + mental base {mental_base}")
-    dex_rolls, dex = roll_attribute(physical_base)
-    print(f"Dex: {dex} {dex_rolls} + physical base {physical_base}")
-    personality_modifier = physical_base if physical_base > mental_base else mental_base
-    personality_rolls, personality = roll_attribute(personality_modifier)
-    print(f"Per: {personality} {personality_rolls} + personality_modifier {personality_modifier}")
-    print("\n")
+    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
+    print(dwarf)
     print("\n")
 
-    physical_base, mental_base = get_bases(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(f"Physical: {physical_base}")
-    print(f"Mental: {mental_base}")
-    strength_rolls, strength = roll_attribute(physical_base)
-    print(f"Strength: {strength} {strength_rolls}  + physical base {physical_base}")
-    intelligence_rolls, intelligence = roll_attribute(mental_base)
-    print(f"Intelligence: {intelligence} {intelligence_rolls} + mental base {mental_base}")
-    wisdom_rolls, wisdom = roll_attribute(mental_base)
-    print(f"Wisdom: {wisdom} {wisdom_rolls} + mental base {mental_base}")
-    dex_rolls, dex = roll_attribute(physical_base)
-    print(f"Dex: {dex} {dex_rolls} + physical base {physical_base}")
-    personality_modifier = physical_base if physical_base > mental_base else mental_base
-    personality_rolls, personality = roll_attribute(personality_modifier)
-    print(f"Per: {personality} {personality_rolls} + personality modifier {personality_modifier}")
+    dwarf_thinker = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
+    print(dwarf_thinker)
+    print("\n")
 
-    physical_base, mental_base = get_bases(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(f"Physical: {physical_base}")
-    print(f"Mental: {mental_base}")
-    strength_rolls, strength = roll_attribute(physical_base)
-    print(f"Strength: {strength} {strength_rolls}  + physical base {physical_base}")
-    intelligence_rolls, intelligence = roll_attribute(mental_base)
-    print(f"Intelligence: {intelligence} {intelligence_rolls} + mental base {mental_base}")
-    wisdom_rolls, wisdom = roll_attribute(mental_base)
-    print(f"Wisdom: {wisdom} {wisdom_rolls} + mental base {mental_base}")
-    dex_rolls, dex = roll_attribute(physical_base)
-    print(f"Dex: {dex} {dex_rolls} + physical base {physical_base}")
-    personality_modifier = physical_base if physical_base > mental_base else mental_base
-    personality_rolls, personality = roll_attribute(personality_modifier)
-    print(f"Per: {personality} {personality_rolls} + personality modifier {personality_modifier}")
+    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
+    print(human)
+    print("\n")
+
+    human_mage = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
+    print(human_mage)
