@@ -33,6 +33,46 @@ class Character:
         self.constitution_rolls, self.constitution = roll_attribute(self.physical_base)
         self.personality_modifier = self.physical_base if self.physical_base > self.mental_base else self.mental_base
         self.personality_rolls, self.personality = roll_attribute(self.personality_modifier)
+        self.starting_skill_points = self.physical_base + self.mental_base
+        self.action_point_base = 6 + self.get_physical_attribute_modifiers()
+        self.hit_points = self.strength + self.constitution + self.dexterity + self.physical_base
+        self.fatigue_points = self.strength + self.constitution + self.dexterity + self.intelligence + self.wisdom + self.personality
+
+    def get_physical_attribute_modifiers(self):
+        """
+        |        |           |
+        | ------ | --------- |
+        | 0-2    | Paralyzed |
+        | 3      | -4        |
+        | 4      | -3        |
+        | 5      | -2        |
+        | 6      | -1        |
+        | 7 - 14 | 0         |
+        | 15-16  | +1        |
+        | 17     | +2        |
+        | 18     | +3        |
+
+        :return: some of str, con, and dex modifiers
+        """
+        modifiers = {}
+        modifiers[3] = -4
+        modifiers[4] = -3
+        modifiers[5] = -2
+        modifiers[6] = -1
+        modifiers[7] = 0
+        modifiers[8] = 0
+        modifiers[9] = 0
+        modifiers[10] = 0
+        modifiers[11] = 0
+        modifiers[12] = 0
+        modifiers[13] = 0
+        modifiers[14] = 0
+        modifiers[15] = 1
+        modifiers[16] = 1
+        modifiers[17] = 2
+        modifiers[18] = 3
+
+        return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
 
     def __str__(self):
         return (f"Character race: {self.race}  Base priority: {self.base_preference.value}\n"
@@ -42,8 +82,11 @@ class Character:
                 f"Wisdom: {self.wisdom} (rolls: {self.wisdom_rolls}) base: {self.mental_base}\n"
                 f"Dexterity: {self.dexterity} (rolls: {self.dexterity_rolls}) base: {self.physical_base}\n"
                 f"Constitution: {self.constitution} (rolls: {self.constitution_rolls}) base: {self.physical_base}\n"
-                f"Personality: {self.personality} (rolls: {self.personality_rolls}  base: {self.personality_modifier}\n")
-
+                f"Personality: {self.personality} (rolls: {self.personality_rolls}  base: {self.personality_modifier}\n"
+                f"Hit Points: {self.hit_points} \n"
+                f"Fatigue Points: {self.fatigue_points} \n"
+                f"Starting Skill Points: {self.starting_skill_points} \n"
+                f"Action Points (before skill modifier) {self.action_point_base} \n")
 
 def get_bases(race=RaceTypes.HUMAN, base_preference=BaseTypes.PHYSICAL):
     base = roll_dice(race.value[1], race.value[0])
