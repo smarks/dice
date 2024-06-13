@@ -3,8 +3,8 @@ from enum import Enum
 
 
 class BaseTypes(Enum):
-    MENTAL = "mental"
-    PHYSICAL = "physical"
+    MENTAL = "Mental"
+    PHYSICAL = "Physical"
 
 
 class RaceTypes(Enum):
@@ -74,9 +74,16 @@ class Character:
 
         return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
 
+        self.strength = cap(self.strength)
+        self.intelligence = cap(self.intelligence)
+        self.wisdom = cap(self.wisdom)
+        self.dexterity = cap(self.dexterity_rolls)
+        self.constitution = cap(self.constitution)
+        self.personality = cap(self.personality)
+
     def __str__(self):
-        return (f"Character race: {self.race}  Base priority: {self.base_preference.value}\n"
-                f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )\n"
+        return (f"Character race: {self.race.name.capitalize()})\n"
+                f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )  Base priority: {self.base_preference.value}\n"
                 f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
                 f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
                 f"Wisdom: {self.wisdom} (rolls: {self.wisdom_rolls}) base: {self.mental_base}\n"
@@ -87,6 +94,27 @@ class Character:
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
                 f"Action Points (before skill modifier) {self.action_point_base} \n")
+
+def cap(attribute):
+    """ if attribute is greater than 18 use old school D&D where you need 10 additional points to get to next
+        attribute level
+
+        e.g
+        str 20
+        20 - 18  = 2
+        str == 18.2
+
+        if attribute is 3 or less,then keep 3 amd call it 'interesting'
+
+    """
+    if attribute < 3:
+        return 3
+
+    if attribute < 18:
+        return attribute
+
+    return ((attribute - 18) / 10) + 18
+
 
 def get_bases(race=RaceTypes.HUMAN, base_preference=BaseTypes.PHYSICAL):
     base = roll_dice(race.value[1], race.value[0])
