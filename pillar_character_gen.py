@@ -20,6 +20,29 @@ class RaceTypes(Enum):
     GNOME = [4, 6, 0, 0]
 
 
+ """ 
+    attribute modifier dictionary 
+    key - attribute 
+    value - malus or bonus or 0 
+    
+        |        |           |
+        | ------ | --------- |
+        | 0-2    | Paralyzed |
+        | 3      | -4        |
+        | 4      | -3        |
+        | 5      | -2        |
+        | 6      | -1        |
+        | 7 - 14 | 0         |
+        | 15-16  | +1        |
+        | 17     | +2        |
+        | 18     | +3        |
+
+        :return: some of str, con, and dex modifiers
+        """
+        modifiers = {3: -4, 4: -3, 5: -2, 6: -1, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1,
+                     17: 2, 18: 3}
+
+
 class Character:
 
     def __init__(self, race, base_preference):
@@ -38,48 +61,25 @@ class Character:
         self.hit_points = self.strength + self.constitution + self.dexterity + self.physical_base
         self.fatigue_points = self.strength + self.constitution + self.dexterity + self.intelligence + self.wisdom + self.personality
 
-    def get_physical_attribute_modifiers(self):
-        """
-        |        |           |
-        | ------ | --------- |
-        | 0-2    | Paralyzed |
-        | 3      | -4        |
-        | 4      | -3        |
-        | 5      | -2        |
-        | 6      | -1        |
-        | 7 - 14 | 0         |
-        | 15-16  | +1        |
-        | 17     | +2        |
-        | 18     | +3        |
-
-        :return: some of str, con, and dex modifiers
-        """
-        modifiers = {}
-        modifiers[3] = -4
-        modifiers[4] = -3
-        modifiers[5] = -2
-        modifiers[6] = -1
-        modifiers[7] = 0
-        modifiers[8] = 0
-        modifiers[9] = 0
-        modifiers[10] = 0
-        modifiers[11] = 0
-        modifiers[12] = 0
-        modifiers[13] = 0
-        modifiers[14] = 0
-        modifiers[15] = 1
-        modifiers[16] = 1
-        modifiers[17] = 2
-        modifiers[18] = 3
-
-        return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
-
+        # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
         self.intelligence = cap(self.intelligence)
         self.wisdom = cap(self.wisdom)
         self.dexterity = cap(self.dexterity_rolls)
         self.constitution = cap(self.constitution)
         self.personality = cap(self.personality)
+
+    def get_physical_attribute_modifiers(self):
+        """
+        return an
+       """
+        return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
+
+    def get_intellectual_attribute_modifiers(self):
+        """
+        return an
+       """
+        return modifiers[self.intelligence] + modifiers[self.wisdom] + modifiers[self.personality_modifier]
 
     def __str__(self):
         return (f"Character race: {self.race.name.capitalize()})\n"
