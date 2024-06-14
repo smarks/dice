@@ -1,5 +1,6 @@
 from main import roll_dice
 from enum import Enum
+import math
 
 
 class BaseTypes(Enum):
@@ -20,27 +21,27 @@ class RaceTypes(Enum):
     GNOME = [4, 6, 0, 0]
 
 
- """ 
-    attribute modifier dictionary 
-    key - attribute 
-    value - malus or bonus or 0 
-    
-        |        |           |
-        | ------ | --------- |
-        | 0-2    | Paralyzed |
-        | 3      | -4        |
-        | 4      | -3        |
-        | 5      | -2        |
-        | 6      | -1        |
-        | 7 - 14 | 0         |
-        | 15-16  | +1        |
-        | 17     | +2        |
-        | 18     | +3        |
+""" 
+   attribute modifier dictionary 
+   key - attribute 
+   value - malus or bonus or 0 
+   
+       |        |           |
+       | ------ | --------- |
+       | 0-2    | Paralyzed |
+       | 3      | -4        |
+       | 4      | -3        |
+       | 5      | -2        |
+       | 6      | -1        |
+       | 7 - 14 | 0         |
+       | 15-16  | +1        |
+       | 17     | +2        |
+       | 18     | +3        |
 
-        :return: some of str, con, and dex modifiers
-        """
-        modifiers = {3: -4, 4: -3, 5: -2, 6: -1, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1,
-                     17: 2, 18: 3}
+       :return: some of str, con, and dex modifiers
+       """
+modifiers = {3: -4, 4: -3, 5: -2, 6: -1, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1,
+             17: 2, 18: 3, 19: 4, 20: 5, 21: 6, 22: 7, 23: 8, 24: 9}
 
 
 class Character:
@@ -65,7 +66,7 @@ class Character:
         self.strength = cap(self.strength)
         self.intelligence = cap(self.intelligence)
         self.wisdom = cap(self.wisdom)
-        self.dexterity = cap(self.dexterity_rolls)
+        self.dexterity = cap(self.dexterity)
         self.constitution = cap(self.constitution)
         self.personality = cap(self.personality)
 
@@ -73,13 +74,15 @@ class Character:
         """
         return an
        """
-        return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
+        return modifiers[math.floor(self.strength)] + modifiers[math.floor(self.dexterity)] + modifiers[
+            math.floor(self.constitution)]
 
     def get_intellectual_attribute_modifiers(self):
         """
         return an
        """
-        return modifiers[self.intelligence] + modifiers[self.wisdom] + modifiers[self.personality_modifier]
+        return modifiers[math.floor(self.intelligence)] + modifiers[math.floor(self.wisdom)] + modifiers[
+            math.floor(self.personality_modifier)]
 
     def __str__(self):
         return (f"Character race: {self.race.name.capitalize()})\n"
@@ -94,6 +97,7 @@ class Character:
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
                 f"Action Points (before skill modifier) {self.action_point_base} \n")
+
 
 def cap(attribute):
     """ if attribute is greater than 18 use old school D&D where you need 10 additional points to get to next
