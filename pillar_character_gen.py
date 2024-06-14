@@ -1,6 +1,5 @@
 from main import roll_dice
 from enum import Enum
-import math
 
 
 class BaseTypes(Enum):
@@ -18,8 +17,6 @@ class RaceTypes(Enum):
     HUMAN = [2, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
     ELF = [6, 6, 0, 0]
     DWARF = [6, 6, 3, -2]
-    GNOME = [4, 6, 0, 0]
-
 
 """ 
    attribute modifier dictionary 
@@ -58,7 +55,7 @@ class Character:
         self.personality_modifier = self.physical_base if self.physical_base > self.mental_base else self.mental_base
         self.personality_rolls, self.personality = roll_attribute(self.personality_modifier)
 
-      # calculated stats
+        # calculated stats
         self.starting_skill_points = self.physical_base + self.mental_base
         self.action_point_base = 6 + self.get_physical_attribute_modifiers()
         self.hit_points = self.strength + self.constitution
@@ -76,15 +73,15 @@ class Character:
         """
         return an
        """
-        return modifiers[math.floor(self.strength)] + modifiers[math.floor(self.dexterity)] + modifiers[
-            math.floor(self.constitution)]
+        return modifiers[int(self.strength)] + modifiers[int(self.dexterity)] + modifiers[
+            int(self.constitution)]
 
     def get_intellectual_attribute_modifiers(self):
         """
         return an
        """
-        return modifiers[math.floor(self.intelligence)] + modifiers[math.floor(self.wisdom)] + modifiers[
-            math.floor(self.personality_modifier)]
+        return modifiers[int(self.intelligence)] + modifiers[int(self.wisdom)] + modifiers[
+            int(self.personality_modifier)]
 
     def __str__(self):
         return (f"Character race: {self.race.name.capitalize()}\n"
@@ -144,6 +141,7 @@ def roll_attribute(base_modifier):
     total = total + base_modifier
     return rolls, total
 
+
 def print_character(character):
     print("Name: ______________")
     print("Age: _____")
@@ -190,23 +188,18 @@ def print_character(character):
 
 
 if __name__ == "__main__":
+    '''
+        print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+        print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+        print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+        print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+        print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+        print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
+    '''
+print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+print(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+print(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+print(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+print(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+print(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
 
-    print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
-    print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
-    print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
-    print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
-    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
-    print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
-    print_character(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
-    print_character(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
-"""
-    print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
-    print(Character(RaceTypes.ELF, BaseTypes.MENTAL))
-    print(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
-    print(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
-    print(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
-    print(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
-    print(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
-    print(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
-
-"""

@@ -103,16 +103,10 @@ These attributes serve as the foundation for related characteristics giving them
 
 Here's how to determine physical base for common races. If you want to run a character of some other race discuss with the GM. 
 
-- [Humans](#character-races "Character Races") roll 4 d8 pick two
+- [Humans](#character-races "Character Races") roll 2 d8 pick two
 - [Elves](#character-races "Character Races") roll 6 d6 pick two
 - [Dwarves](#character-races "Character Races") roll 6 d6 pick two and add +3 for physical and -2 for mental
-- [Gnomes](#character-races "Character Races") 4 d6  and pick two
 
-Draft —
-- Small Folk roll 4 d4 pick two add +1 to each base 
-- Hillmen roll 4 d6 pick highest and add +3 for physical base then  roll 2 d4 and pick one for mental base.
--  Fae roll 4 d6  pick two  and +3 for mental and -2 for physical
---
 
 ## Skill Points
 Skill points are used to learn just about anything. The more skill points you have in a specific skill, the better you are at it. Typically skills cost 1 skill point for level one skills, 2 skill points for level 2 and so on. You need skills be more effective with just about anything you want to do. If you don't have a skill and try an activity, you do so with skill 0 which is entirely possible (you aren't prevent from trying) but you won't be very good at it.
@@ -200,27 +194,12 @@ Currently races include
 		                - highlands
 
 - **Elves** 
-		- **Wood** smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. Ill tempered towards any that share their values. constitution +1, wood lore skill +2
+		- **Wood** smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. I'll tempered towards any that share their values. constitution +1, wood lore skill +2
 		
 		- **High** Typically taller, more slender than typical humans who don't seem to age. Considered wise and intelligent but often also skilled in various martial arts (in the most general sense of the term). Aloof isolationists. Not often encountered. Sometimes a lone high elf will seek the company of other races.  constitution +2
 
-- **Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1, strength +1, -1 dex, -1 personality +1 craftsmanship
+- **Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1, strength +1, -1 dex, -1 personality craftsmanship skill 1
 
-- **Gnomes** Similar to dwarves but lesser in all respects including their dislike for other races and direct opposite in disposition to their cousins the dwarves. Note: dwarves typically  look down about Gnomes while Gnomes typically roll their eyes at their less gregarious cousins. Beards are typical for males, but not always worn. Female Gnomes are obvious. constitution +1, strength +1,  intelligence or wisdom +1
-
-Draft —
-- **Fae**  A magical folk who typically keep to themselves but sometimes venture into human society either out of curiosity or perhaps a Geas. Malus and bonuses vary - see games master.
-
-- **Small Folk** Not Hobbits, Not halflings, humanoids of dominative statue, not as stout as Dwarves but more nimble and clever. Not worldly. Isolationist. Rarely encountered. Sometimes mixed up with gnomes to neither their or the Gnomes amusement. str -2, dex +1, per +1
-
-- \*\*Hill People \*\*  rough, doughty, ill tempered, focus on the physical and the mental less so. Typical do not mix well with other races living in wild and untamed places. Str +2, con +2, dex + 1, personality -3, intelligence or wisdom -1
-
-- \*\*Snake People \*\* Clearly a race of being far different than other humanoids. Also called Lizard Men and Dragon Spawn. Some say they are result of a fae and dragon coupling although there is only vague speculation on that would really work. Given the different natures of each. Snake people are generally taller, and heavier than other races including all but the most robust Hill people, but there are also variations. In one extreme, a snake person can appear extremely lizard like in skin texture and pattern and claw like hands and feet to the other extreme where they present as shallow skinned humans.  Some say these physical manifestations are phases in their growth while others speculate that there are different classes of Snake People.
-
-		Often viewed by other races as haughty bullies and sometimes thuggish.  They do possess superior mental and physical attributes.  Amongst themselves they subscribe to a strong well formulated cultural and political hierarchy which is largely opaque to outsiders.  Snake people rarely go mingle with other races, when they do, it is typically because an individual has either been ostracized from their community or completing an initiation rite that entails learning about as much as they can from outside of their community. There communities themselves are typically secreted away and not accessible to outsiders. The old empire was said to be organized and run by a  Cabal of Snake people  but that was in the distant past, and certainly the old empire's population and those that are considered descendants of the old empire are humans. 
-		
-		Attribute modifiers are not public
---
 
 # Character Generation
 ### Pick a race
