@@ -190,6 +190,7 @@ def print_character(character):
 
 
 if __name__ == "__main__":
+
     print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
     print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
     print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
@@ -198,5 +199,14 @@ if __name__ == "__main__":
     print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
     print_character(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
     print_character(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
+"""
+    print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+    print(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+    print(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
+    print(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
 
-
+"""
