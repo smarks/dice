@@ -144,22 +144,59 @@ def roll_attribute(base_modifier):
     total = total + base_modifier
     return rolls, total
 
+def print_character(character):
+    print("Name: ______________")
+    print("Age: _____")
+    print("")
+    print("Description: ______________")
+
+    print("")
+    print(character)
+    print("")
+
+    print("Skills")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+
+    print("")
+
+    print("Weapons")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Armour  AC:[  ] ")
+    print("")
+    print(" Head:  __________________________ Torso __________________________")
+    print(" Arms   __________________________ Legs  __________________________")
+    print("")
+    print("Notes")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+
+    print(chr(12), end='')
+
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
-    print(elf)
-    print("---------------------------------------------")
-    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(elf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(human)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(human)
+    print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
+
+
