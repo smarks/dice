@@ -60,7 +60,7 @@ class Character:
         self.starting_skill_points = self.physical_base + self.mental_base
         self.action_point_base = 6 + self.get_physical_attribute_modifiers()
         self.hit_points = self.strength + self.constitution + self.dexterity + self.physical_base
-        self.fatigue_points = self.strength + self.constitution + self.dexterity + self.intelligence + self.wisdom + self.personality
+        self.fatigue_points = self.strength + self.constitution + self.dexterity + self.wisdom + self.personality
 
         # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
