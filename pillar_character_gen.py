@@ -15,7 +15,7 @@ class RaceTypes(Enum):
     - [Dwarves](# "Character Races") roll 6 d6 pick two and add +3 for physical and -2 for mental
     - [Gnomes](# "Character Races") 4 d6  and pick two
     """
-    HUMAN = [4, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
+    HUMAN = [2, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
     ELF = [6, 6, 0, 0]
     DWARF = [6, 6, 3, -2]
     GNOME = [4, 6, 0, 0]
@@ -57,10 +57,12 @@ class Character:
         self.constitution_rolls, self.constitution = roll_attribute(self.physical_base)
         self.personality_modifier = self.physical_base if self.physical_base > self.mental_base else self.mental_base
         self.personality_rolls, self.personality = roll_attribute(self.personality_modifier)
+
+      # calculated stats
         self.starting_skill_points = self.physical_base + self.mental_base
         self.action_point_base = 6 + self.get_physical_attribute_modifiers()
-        self.hit_points = self.strength + self.constitution + self.dexterity
-        self.fatigue_points = self.strength + self.constitution + self.dexterity + self.wisdom
+        self.hit_points = self.strength + self.constitution
+        self.fatigue_points = self.constitution + self.dexterity + self.wisdom
 
         # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
@@ -146,19 +148,19 @@ def roll_attribute(base_modifier):
 if __name__ == "__main__":
     elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
     print(elf)
-    print("\n")
-
+    print("---------------------------------------------")
+    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
+    print(elf)
+    print("---------------------------------------------")
     dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
     print(dwarf)
-    print("\n")
-
-    dwarf_thinker = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
-    print(dwarf_thinker)
-    print("\n")
-
+    print("---------------------------------------------")
+    dwarf = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
+    print(dwarf)
+    print("---------------------------------------------")
     human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
     print(human)
-    print("\n")
+    print("---------------------------------------------")
+    human = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
+    print(human)
 
-    human_mage = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(human_mage)
