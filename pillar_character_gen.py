@@ -1,5 +1,6 @@
 from main import roll_dice
 from enum import Enum
+import math
 
 
 class BaseTypes(Enum):
@@ -14,10 +15,33 @@ class RaceTypes(Enum):
     - [Dwarves](# "Character Races") roll 6 d6 pick two and add +3 for physical and -2 for mental
     - [Gnomes](# "Character Races") 4 d6  and pick two
     """
-    HUMAN = [4, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
+    HUMAN = [2, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
     ELF = [6, 6, 0, 0]
     DWARF = [6, 6, 3, -2]
     GNOME = [4, 6, 0, 0]
+
+
+""" 
+   attribute modifier dictionary 
+   key - attribute 
+   value - malus or bonus or 0 
+   
+       |        |           |
+       | ------ | --------- |
+       | 0-2    | Paralyzed |
+       | 3      | -4        |
+       | 4      | -3        |
+       | 5      | -2        |
+       | 6      | -1        |
+       | 7 - 14 | 0         |
+       | 15-16  | +1        |
+       | 17     | +2        |
+       | 18     | +3        |
+
+       :return: some of str, con, and dex modifiers
+       """
+modifiers = {3: -4, 4: -3, 5: -2, 6: -1, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 1, 16: 1,
+             17: 2, 18: 3, 19: 4, 20: 5, 21: 6, 22: 7, 23: 8, 24: 9}
 
 
 class Character:
@@ -33,56 +57,37 @@ class Character:
         self.constitution_rolls, self.constitution = roll_attribute(self.physical_base)
         self.personality_modifier = self.physical_base if self.physical_base > self.mental_base else self.mental_base
         self.personality_rolls, self.personality = roll_attribute(self.personality_modifier)
+
+      # calculated stats
         self.starting_skill_points = self.physical_base + self.mental_base
         self.action_point_base = 6 + self.get_physical_attribute_modifiers()
-        self.hit_points = self.strength + self.constitution + self.dexterity + self.physical_base
-        self.fatigue_points = self.strength + self.constitution + self.dexterity + self.intelligence + self.wisdom + self.personality
+        self.hit_points = self.strength + self.constitution
+        self.fatigue_points = self.constitution + self.dexterity + self.wisdom
 
-    def get_physical_attribute_modifiers(self):
-        """
-        |        |           |
-        | ------ | --------- |
-        | 0-2    | Paralyzed |
-        | 3      | -4        |
-        | 4      | -3        |
-        | 5      | -2        |
-        | 6      | -1        |
-        | 7 - 14 | 0         |
-        | 15-16  | +1        |
-        | 17     | +2        |
-        | 18     | +3        |
-
-        :return: some of str, con, and dex modifiers
-        """
-        modifiers = {}
-        modifiers[3] = -4
-        modifiers[4] = -3
-        modifiers[5] = -2
-        modifiers[6] = -1
-        modifiers[7] = 0
-        modifiers[8] = 0
-        modifiers[9] = 0
-        modifiers[10] = 0
-        modifiers[11] = 0
-        modifiers[12] = 0
-        modifiers[13] = 0
-        modifiers[14] = 0
-        modifiers[15] = 1
-        modifiers[16] = 1
-        modifiers[17] = 2
-        modifiers[18] = 3
-
-        return modifiers[self.strength] + modifiers[self.dexterity] + modifiers[self.constitution]
-
+        # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
         self.intelligence = cap(self.intelligence)
         self.wisdom = cap(self.wisdom)
-        self.dexterity = cap(self.dexterity_rolls)
+        self.dexterity = cap(self.dexterity)
         self.constitution = cap(self.constitution)
         self.personality = cap(self.personality)
 
+    def get_physical_attribute_modifiers(self):
+        """
+        return an
+       """
+        return modifiers[math.floor(self.strength)] + modifiers[math.floor(self.dexterity)] + modifiers[
+            math.floor(self.constitution)]
+
+    def get_intellectual_attribute_modifiers(self):
+        """
+        return an
+       """
+        return modifiers[math.floor(self.intelligence)] + modifiers[math.floor(self.wisdom)] + modifiers[
+            math.floor(self.personality_modifier)]
+
     def __str__(self):
-        return (f"Character race: {self.race.name.capitalize()})\n"
+        return (f"Character race: {self.race.name.capitalize()}\n"
                 f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )  Base priority: {self.base_preference.value}\n"
                 f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
                 f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
@@ -94,6 +99,7 @@ class Character:
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
                 f"Action Points (before skill modifier) {self.action_point_base} \n")
+
 
 def cap(attribute):
     """ if attribute is greater than 18 use old school D&D where you need 10 additional points to get to next
@@ -138,23 +144,69 @@ def roll_attribute(base_modifier):
     total = total + base_modifier
     return rolls, total
 
+def print_character(character):
+    print("Name: ______________")
+    print("Age: _____")
+    print("")
+    print("Description: ______________")
+
+    print("")
+    print(character)
+    print("")
+
+    print("Skills")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+
+    print("")
+
+    print("Weapons")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
+    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("")
+    print("Armour  AC:[  ] ")
+    print("")
+    print(" Head:  __________________________ Torso __________________________")
+    print(" Arms   __________________________ Legs  __________________________")
+    print("")
+    print("Notes")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+    print("____________________________________________________________________________")
+
+    print(chr(12), end='')
+
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
-    print(elf)
-    print("\n")
 
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
-    print(dwarf)
-    print("\n")
+    print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
+    print_character(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
+    print_character(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
+"""
+    print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.ELF, BaseTypes.MENTAL))
+    print(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
+    print(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
+    print(Character(RaceTypes.GNOME, BaseTypes.PHYSICAL))
+    print(Character(RaceTypes.GNOME, BaseTypes.MENTAL))
 
-    dwarf_thinker = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
-    print(dwarf_thinker)
-    print("\n")
-
-    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(human)
-    print("\n")
-
-    human_mage = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(human_mage)
+"""
