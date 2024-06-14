@@ -87,7 +87,7 @@ class Character:
             math.floor(self.personality_modifier)]
 
     def __str__(self):
-        return (f"Character race: {self.race.name.capitalize()})\n"
+        return (f"Character race: {self.race.name.capitalize()}\n"
                 f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )  Base priority: {self.base_preference.value}\n"
                 f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
                 f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
@@ -146,42 +146,6 @@ def roll_attribute(base_modifier):
 
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
-    print(elf)
-    print("---------------------------------------------")
-    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(elf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(human)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(human)
-
-    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
-    print(elf)
-    print("---------------------------------------------")
-    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(elf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    dwarf = Character(RaceTypes.DWARF, BaseTypes.MENTAL)
-    print(dwarf)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(human)
-    print("---------------------------------------------")
-    human = Character(RaceTypes.HUMAN, BaseTypes.MENTAL)
-    print(human)
-
     elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
     print(elf)
     print("---------------------------------------------")
