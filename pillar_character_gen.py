@@ -60,6 +60,7 @@ class Character:
         self.action_point_base = 6 + self.get_physical_attribute_modifiers()
         self.hit_points = self.strength + self.constitution
         self.fatigue_points = self.constitution + self.dexterity + self.wisdom
+        self.movement = self.strength + self.dexterity + self.constitution
 
         # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
@@ -95,7 +96,8 @@ class Character:
                 f"Hit Points: {self.hit_points} \n"
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
-                f"Action Points (before skill modifier) {self.action_point_base} \n")
+                f"Action Points (before skill modifier) {self.action_point_base} \n"
+                f"Movement: {self.movement} \n")
 
 
 def cap(attribute):
