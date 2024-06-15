@@ -121,6 +121,8 @@ Skill points are used to learn just about anything. The more skill points you ha
 6 + str bonus + dex bonus + con bonus + highest bonus from a skill - armor and shield encumbrance
 For most "actiony" skills, the bonus is skill / 3. Action point bonuses occur at skills 2, 5, and 8
 
+####  Skill Point  progression.
+ You get 1 skill point per sub-level ([experience below](#experience "Experience ")) 
 
 Skills can anything you'd like your character to be better at. Here are some common examples:
 
@@ -140,7 +142,7 @@ Skills can anything. If it is not obvious, e.g. Bastard Sword Parry +1, discuss 
 
 If more than skill gives the same bonus, only the skill with the highest bonus is applied.
 
-A list of common skills can be found here
+
 
 ## Hit Points and Fatigue Points
 Fatigue is your endurance. Your energy level. The harder or longer an activity is, the more endurance is required.  The sum of your attributes are your starting fatigue points . Each level add the results of a d6 + the sum of attribute malus or bonus from race (see below) and attributes as you apply your characters constitution malus or bonus to this roll.
@@ -153,7 +155,7 @@ Neither Hit Points and Fatigue points can be directly affected by skills. Instea
 Starting hit points = Str + Con 
 
 #### Hit Point progression.
-Characters get a D6 + Con per level. 
+Characters get a D6 + Con d6 + constitution modifier aer  added to your character’s hit points.
 
 ### Starting Fatigue Points
 Starting fatigue points = con + dex + wis
@@ -490,9 +492,10 @@ d20 adjusted dex check close by 2
 fail check close by 1
 20 trip
 prep
-increase chance of success of next action by 1
-for every 3 preps to an physical attack double damage
-if you interrupt prepping any accumulated points go away.
+increase chance of success of next action.
+A "prep" action grants a  plus to to hit and 1/2 again as much damage. e.g is a broadsword preps twice, they get a +3 to hit and double the amount of damage 
+if you interrupted during prepping any accumulated points go away.
+Interruptions: take damage, use an action point 
 
 **Offensive**
 throw light weapon
@@ -590,7 +593,7 @@ Jake goes first.
 |                             | **Armour** effects DEX via encumbrance penalty                                                                                                                                                                                                                                                                                                                                                                                                                               |||||||||||||
 |                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |||||||||||||
 |                             | **Prepping and Great Blows**                                                                                                                                                                                                                                                                                                                                                                                                                                                 |||||||||||||
-|                             | A "prep" action grants a exponential  plus to to hit and 1/2 again as much damage. e.g is a broadsword preps twice, they get a +3 to hit and double the amount of damage                                                                                                                                                                                                                                                                                                     |||||||||||||
+|                             | A "prep" action grants a  plus to to hit and 1/2 again as much damage. e.g is a broadsword preps twice, they get a +3 to hit and double the amount of damage                                                                                                                                                                                                                                                                                                                 |||||||||||||
 |                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |||||||||||||
 |                             | **Weapons that can be used either one handed to two handed** (Andy light or medium) unless you have a strength of 18 then you can use great weapons                                                                                                                                                                                                                                                                                                                          |||||||||||||
 |                             |  **Shield** first shield action does not cost an action point. |               |                  |                            |                                  |                                   |                                         |                                  |                                         |                                    |                                          |                                  |                                        |
@@ -663,6 +666,7 @@ You can specialize
 \*\* Shipwright\*\*
 \*\* Wainwright\*\*
 \*\* Jeweler\*\*
+**craftsmanship**
 
 ### Wilderness Survival  Related Skills
 

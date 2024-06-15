@@ -69,6 +69,8 @@ class Character:
         self.dexterity = cap(self.dexterity)
         self.constitution = cap(self.constitution)
         self.personality = cap(self.personality)
+        self.level = 0
+        self.total_skill_points = self.starting_skill_points
 
     def get_physical_attribute_modifiers(self):
         """
@@ -93,12 +95,22 @@ class Character:
                 f"Dexterity: {self.dexterity} (rolls: {self.dexterity_rolls}) base: {self.physical_base}\n"
                 f"Constitution: {self.constitution} (rolls: {self.constitution_rolls}) base: {self.physical_base}\n"
                 f"Personality: {self.personality} (rolls: {self.personality_rolls}  base: {self.personality_modifier}\n"
+                f"Level: {self.level} \n"  
                 f"Hit Points: {self.hit_points} \n"
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
+                f"Total Skill Points: {self.total_skill_points} \n"
                 f"Action Points (before skill modifier) {self.action_point_base} \n"
                 f"Movement: {self.movement} \n")
 
+    def level_up(self, level: int = 1) -> None:
+        for x in range(level):
+            self.level += 1
+            hit_point_roll = roll_dice(6,1  )
+            self.hit_points += hit_point_roll[0] + modifiers[self.constitution]
+            fatigue_point_roll = roll_dice(6,1  )
+            self.fatigue_points += fatigue_point_roll[0] + modifiers[self.constitution]
+            self.total_skill_points += self.level
 
 def cap(attribute):
     """ if attribute is greater than 18 use old school D&D where you need 10 additional points to get to next
@@ -190,14 +202,20 @@ def print_character(character):
 
 
 if __name__ == "__main__":
-    '''
+    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print(elf)
+    elf.level_up(4)
+    print(elf)
+"""
         print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
         print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
         print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
         print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
         print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
         print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
-    '''
+"""
+
+'''
 print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
 print(Character(RaceTypes.ELF, BaseTypes.MENTAL))
 print(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
@@ -205,3 +223,4 @@ print(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
 print(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
 print(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
 
+'''
