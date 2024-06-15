@@ -649,6 +649,7 @@ You can specialize
 \*\* Shipwright\*\*
 \*\* Wainwright\*\*
 \*\* Jeweler\*\*
+\*\* craftsmanship \*\*
 
 ### Wilderness Survival  Related Skills
 
