@@ -144,8 +144,8 @@ def get_bases(race=RaceTypes.HUMAN, base_preference=BaseTypes.PHYSICAL):
         physical_base = base[index_of_highest] + physical_modifier
         mental_base = base[index_of_highest - 1] + mental_modifier
     else:
-        physical_base = base[index_of_highest] + physical_modifier
-        mental_base = base[index_of_highest - 1] + mental_modifier
+        mental_base = base[index_of_highest] + physical_modifier
+        physical_base = base[index_of_highest - 1] + mental_modifier
 
     return physical_base, mental_base, base
 
@@ -204,12 +204,10 @@ def print_character(character):
 if __name__ == "__main__":
     elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
     print(elf)
-    elf.level_up(4)
-    print(elf)
+
     human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
     print(human)
-    human.level_up(2)
-    print(human)
+
 """
         print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
         print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))

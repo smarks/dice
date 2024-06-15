@@ -261,71 +261,37 @@ Keep track of:
 
 **Here are some examples:**
 
-Character race: Elf
-Level: 1 
-Physical base: 5, Mental base: 4 (rolls: [1, 2, 2, 3, 4, 5] )  Base priority: Mental
-Strength: 10 (rolls: [2, 3]) base: 5
-Intelligence: 10 (rolls: [2, 4]) base: 4
-Wisdom: 8 (rolls: [1, 3]) base: 4
-Dexterity: 9 (rolls: [3, 1]) base: 5
-Constitution: 15 (rolls: [6, 4]) base: 5
-Personality: 12 (rolls: [2, 5]  base: 5
-Hit Points: 25 
-Fatigue Points: 32 
-Starting Skill Points: 9 
-Total Skill Points: 9 
-Action Points (before skill modifier) 7 
-Movement: 34 
-
-Character race: Elf
-Level: 5 
-Physical base: 5, Mental base: 4 (rolls: [1, 2, 2, 3, 4, 5] )  Base priority: Mental
-Strength: 10 (rolls: [2, 3]) base: 5
-Intelligence: 10 (rolls: [2, 4]) base: 4
-Wisdom: 8 (rolls: [1, 3]) base: 4
-Dexterity: 9 (rolls: [3, 1]) base: 5
-Constitution: 15 (rolls: [6, 4]) base: 5
-Personality: 12 (rolls: [2, 5]  base: 5
-Hit Points: 46 
-Fatigue Points: 48 
-Starting Skill Points: 9 
-Total Skill Points: 23 
-Action Points (before skill modifier) 7 
-Movement: 34 
-
 Character race: Human
 Level: 1 
-Physical base: 8, Mental base: 4 (rolls: [4, 8] )  Base priority: Physical
-Strength: 15 (rolls: [4, 3]) base: 8
-Intelligence: 12 (rolls: [4, 4]) base: 4
-Wisdom: 11 (rolls: [5, 2]) base: 4
-Dexterity: 18.0 (rolls: [4, 6]) base: 8
-Constitution: 18.0 (rolls: [5, 5]) base: 8
-Personality: 18.0 (rolls: [6, 4]  base: 8
-Hit Points: 33 
-Fatigue Points: 47 
-Starting Skill Points: 12 
-Total Skill Points: 12 
-Action Points (before skill modifier) 13 
-Movement: 51 
+Physical base: 2, Mental base: 2 (rolls: [2, 2] )  Base priority: Physical
+Strength: 11 (rolls: [3, 6]) base: 2
+Intelligence: 7 (rolls: [1, 4]) base: 2
+Wisdom: 6 (rolls: [1, 3]) base: 2
+Dexterity: 10 (rolls: [4, 4]) base: 2
+Constitution: 7 (rolls: [4, 1]) base: 2
+Personality: 10 (rolls: [2, 6]  base: 2
+Hit Points: 18 
+Fatigue Points: 23 
+Starting Skill Points: 4 
+Total Skill Points: 4 
+Action Points (before skill modifier) 6 
+Movement: 28 
 
-Character race: Human
-Level: 3 
-Physical base: 8, Mental base: 4 (rolls: [4, 8] )  Base priority: Physical
-Strength: 15 (rolls: [4, 3]) base: 8
-Intelligence: 12 (rolls: [4, 4]) base: 4
-Wisdom: 11 (rolls: [5, 2]) base: 4
-Dexterity: 18.0 (rolls: [4, 6]) base: 8
-Constitution: 18.0 (rolls: [5, 5]) base: 8
-Personality: 18.0 (rolls: [6, 4]  base: 8
-Hit Points: 43 
-Fatigue Points: 61 
-Starting Skill Points: 12 
-Total Skill Points: 17 
-Action Points (before skill modifier) 13 
-Movement: 51 
-
- 
+Character race: Elf
+Level: 1 
+Physical base: 5, Mental base: 6 (rolls: [3, 3, 5, 5, 5, 6](#) )  Base priority: Mental
+Strength: 8 (rolls: [1, 2](#)) base: 5
+Intelligence: 10 (rolls: [1, 3](#)) base: 6
+Wisdom: 16 (rolls: [6, 4](#)) base: 6
+Dexterity: 11 (rolls: [5, 1](#)) base: 5
+Constitution: 10 (rolls: [4, 1](#)) base: 5
+Personality: 15 (rolls: [5, 4](#)  base: 6
+Hit Points: 18 
+Fatigue Points: 37 
+Starting Skill Points: 11 
+Total Skill Points: 11 
+Action Points (before skill modifier) 6 
+Movement: 29 
 ### Starting skill points
 Add physical and mental base to get your starting skill points.
 You can use these points for skills but one type of skill is increasing your character attributes. The skill point cost for increasing character attributes works a bit different than most other skills. Here's how it differs.
