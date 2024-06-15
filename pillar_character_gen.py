@@ -69,7 +69,7 @@ class Character:
         self.dexterity = cap(self.dexterity)
         self.constitution = cap(self.constitution)
         self.personality = cap(self.personality)
-        self.level = 0
+        self.level = 1
         self.total_skill_points = self.starting_skill_points
 
     def get_physical_attribute_modifiers(self):
@@ -88,6 +88,7 @@ class Character:
 
     def __str__(self):
         return (f"Character race: {self.race.name.capitalize()}\n"
+                f"Level: {self.level} \n"  
                 f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )  Base priority: {self.base_preference.value}\n"
                 f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
                 f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
@@ -95,7 +96,6 @@ class Character:
                 f"Dexterity: {self.dexterity} (rolls: {self.dexterity_rolls}) base: {self.physical_base}\n"
                 f"Constitution: {self.constitution} (rolls: {self.constitution_rolls}) base: {self.physical_base}\n"
                 f"Personality: {self.personality} (rolls: {self.personality_rolls}  base: {self.personality_modifier}\n"
-                f"Level: {self.level} \n"  
                 f"Hit Points: {self.hit_points} \n"
                 f"Fatigue Points: {self.fatigue_points} \n"
                 f"Starting Skill Points: {self.starting_skill_points} \n"
@@ -202,10 +202,14 @@ def print_character(character):
 
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
     print(elf)
     elf.level_up(4)
     print(elf)
+    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
+    print(human)
+    human.level_up(2)
+    print(human)
 """
         print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
         print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))

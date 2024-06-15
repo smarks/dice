@@ -259,111 +259,72 @@ Keep track of:
 - Initial values of all attributes
 - Each increase of attributes
 
-Here are some examples:
-
- Character race: Elf
-Physical base: 6, Mental base: 6 (rolls: [2, 3, 3, 3, 6, 6] )  Base priority: Physical
-Strength: 13 (rolls: [3, 4]) base: 6
-Intelligence: 16 (rolls: [6, 4]) base: 6
-Wisdom: 11 (rolls: [2, 3]) base: 6
-Dexterity: 13 (rolls: [3, 4]) base: 6
-Constitution: 15 (rolls: [4, 5]) base: 6
-Personality: 13 (rolls: [3, 4]  base: 6
-Hit Points: 28 
-Fatigue Points: 39 
-Starting Skill Points: 12 
-Action Points (before skill modifier) 7 
+**Here are some examples:**
 
 Character race: Elf
-Physical base: 4, Mental base: 4 (rolls: [1, 1, 2, 2, 4, 4] )  Base priority: Mental
-Strength: 10 (rolls: [4, 2]) base: 4
-Intelligence: 12 (rolls: [4, 4]) base: 4
-Wisdom: 10 (rolls: [3, 3]) base: 4
-Dexterity: 12 (rolls: [5, 3]) base: 4
-Constitution: 14 (rolls: [6, 4]) base: 4
-Personality: 13 (rolls: [4, 5]  base: 4
-Hit Points: 24 
-Fatigue Points: 36 
-Starting Skill Points: 8 
-Action Points (before skill modifier) 6 
-
-Character race: Dwarf
-Physical base: 7, Mental base: 1 (rolls: [1, 2, 2, 3, 3, 4] )  Base priority: Physical
-Strength: 18.0 (rolls: [6, 5]) base: 7
-Intelligence: 4 (rolls: [2, 1]) base: 1
-Wisdom: 6 (rolls: [1, 4]) base: 1
-Dexterity: 10 (rolls: [1, 2]) base: 7
-Constitution: 12 (rolls: [2, 3]) base: 7
-Personality: 14 (rolls: [2, 5]  base: 7
-Hit Points: 30 
-Fatigue Points: 28 
-Starting Skill Points: 8 
-Action Points (before skill modifier) 9 
-
-Character race: Dwarf
-Physical base: 9, Mental base: 4 (rolls: [1, 2, 4, 5, 6, 6] )  Base priority: Mental
-Strength: 17 (rolls: [5, 3]) base: 9
-Intelligence: 11 (rolls: [6, 1]) base: 4
-Wisdom: 11 (rolls: [3, 4]) base: 4
-Dexterity: 12 (rolls: [1, 2]) base: 9
-Constitution: 15 (rolls: [1, 5]) base: 9
-Personality: 18.3 (rolls: [6, 6]  base: 9
-Hit Points: 32 
-Fatigue Points: 38 
-Starting Skill Points: 13 
-Action Points (before skill modifier) 9 
-
-Character race: Human
-Physical base: 5, Mental base: 1 (rolls: [1, 5] )  Base priority: Physical
-Strength: 17 (rolls: [6, 6]) base: 5
-Intelligence: 3 (rolls: [1, 1]) base: 1
-Wisdom: 10 (rolls: [6, 3]) base: 1
-Dexterity: 13 (rolls: [2, 6]) base: 5
-Constitution: 15 (rolls: [6, 4]) base: 5
-Personality: 13 (rolls: [2, 6]  base: 5
-Hit Points: 32 
-Fatigue Points: 38 
-Starting Skill Points: 6 
-Action Points (before skill modifier) 9 
-
-Character race: Human
-Physical base: 5, Mental base: 1 (rolls: [1, 5] )  Base priority: Mental
-Strength: 12 (rolls: [6, 1]) base: 5
-Intelligence: 4 (rolls: [2, 1]) base: 1
-Wisdom: 8 (rolls: [1, 6]) base: 1
+Level: 1 
+Physical base: 5, Mental base: 4 (rolls: [1, 2, 2, 3, 4, 5] )  Base priority: Mental
+Strength: 10 (rolls: [2, 3]) base: 5
+Intelligence: 10 (rolls: [2, 4]) base: 4
+Wisdom: 8 (rolls: [1, 3]) base: 4
 Dexterity: 9 (rolls: [3, 1]) base: 5
-Constitution: 12 (rolls: [1, 6]) base: 5
-Personality: 13 (rolls: [6, 2]  base: 5
-Hit Points: 24 
-Fatigue Points: 29 
-Starting Skill Points: 6 
-Action Points (before skill modifier) 6 
+Constitution: 15 (rolls: [6, 4]) base: 5
+Personality: 12 (rolls: [2, 5]  base: 5
+Hit Points: 25 
+Fatigue Points: 32 
+Starting Skill Points: 9 
+Total Skill Points: 9 
+Action Points (before skill modifier) 7 
+Movement: 34 
 
-Character race: Gnome
-Physical base: 6, Mental base: 2 (rolls: [1, 2, 2, 6] )  Base priority: Physical
-Strength: 12 (rolls: [4, 2]) base: 6
-Intelligence: 11 (rolls: [4, 5]) base: 2
-Wisdom: 9 (rolls: [5, 2]) base: 2
-Dexterity: 10 (rolls: [1, 3]) base: 6
-Constitution: 9 (rolls: [1, 2]) base: 6
-Personality: 17 (rolls: [6, 5]  base: 6
-Hit Points: 21 
-Fatigue Points: 28 
-Starting Skill Points: 8 
-Action Points (before skill modifier) 6 
+Character race: Elf
+Level: 5 
+Physical base: 5, Mental base: 4 (rolls: [1, 2, 2, 3, 4, 5] )  Base priority: Mental
+Strength: 10 (rolls: [2, 3]) base: 5
+Intelligence: 10 (rolls: [2, 4]) base: 4
+Wisdom: 8 (rolls: [1, 3]) base: 4
+Dexterity: 9 (rolls: [3, 1]) base: 5
+Constitution: 15 (rolls: [6, 4]) base: 5
+Personality: 12 (rolls: [2, 5]  base: 5
+Hit Points: 46 
+Fatigue Points: 48 
+Starting Skill Points: 9 
+Total Skill Points: 23 
+Action Points (before skill modifier) 7 
+Movement: 34 
 
-Character race: Gnome
-Physical base: 6, Mental base: 5 (rolls: [1, 4, 5, 6] )  Base priority: Mental
-Strength: 13 (rolls: [2, 5]) base: 6
-Intelligence: 14 (rolls: [3, 6]) base: 5
-Wisdom: 11 (rolls: [1, 5]) base: 5
-Dexterity: 14 (rolls: [4, 4]) base: 6
-Constitution: 13 (rolls: [2, 5]) base: 6
-Personality: 16 (rolls: [6, 4]  base: 6
-Hit Points: 26 
-Fatigue Points: 38 
-Starting Skill Points: 11 
-Action Points (before skill modifier) 6 
+Character race: Human
+Level: 1 
+Physical base: 8, Mental base: 4 (rolls: [4, 8] )  Base priority: Physical
+Strength: 15 (rolls: [4, 3]) base: 8
+Intelligence: 12 (rolls: [4, 4]) base: 4
+Wisdom: 11 (rolls: [5, 2]) base: 4
+Dexterity: 18.0 (rolls: [4, 6]) base: 8
+Constitution: 18.0 (rolls: [5, 5]) base: 8
+Personality: 18.0 (rolls: [6, 4]  base: 8
+Hit Points: 33 
+Fatigue Points: 47 
+Starting Skill Points: 12 
+Total Skill Points: 12 
+Action Points (before skill modifier) 13 
+Movement: 51 
+
+Character race: Human
+Level: 3 
+Physical base: 8, Mental base: 4 (rolls: [4, 8] )  Base priority: Physical
+Strength: 15 (rolls: [4, 3]) base: 8
+Intelligence: 12 (rolls: [4, 4]) base: 4
+Wisdom: 11 (rolls: [5, 2]) base: 4
+Dexterity: 18.0 (rolls: [4, 6]) base: 8
+Constitution: 18.0 (rolls: [5, 5]) base: 8
+Personality: 18.0 (rolls: [6, 4]  base: 8
+Hit Points: 43 
+Fatigue Points: 61 
+Starting Skill Points: 12 
+Total Skill Points: 17 
+Action Points (before skill modifier) 13 
+Movement: 51 
+
  
 ### Starting skill points
 Add physical and mental base to get your starting skill points.
@@ -435,7 +396,8 @@ If the character striking has the higher dex, (or equal dex and rolls higher on 
 If the character striking has a lower dex (or equal dex and rolls lower on a d20) they strike at the range preferred by the character who is stepping close, 
 If after the simultaneous original action,, both characters have the same number of action points, the next action is also simultaneous.
 
-The character with the highest AP goes first. They can use as many Action Points as they wish until their number of action points is lower than the next highest character.
+The character with the highest AP goes first. They can use as many Action Points as they wish until their number of action points is equal or lower than the next highest character.(if equal and they choose to use an AP the action is simultaneous.
+
 e.g.
 Fred has 8 points and rolls a d6 gets 1  / 2 round down for a 0 modifier for initiative roll and end up with an 8 for initiative
 Joe has 6 and rolls a d6 gets 6 /2 for 3 additional initiative points for a total of nine 9 for initiative
