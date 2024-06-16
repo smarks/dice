@@ -61,6 +61,8 @@ class Character:
         self.hit_points = self.strength + self.constitution
         self.fatigue_points = self.constitution + self.dexterity + self.wisdom
         self.movement = self.strength + self.dexterity + self.constitution
+        if race == RaceTypes.DWARF:
+            self.movement /= 2
 
         # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
@@ -202,8 +204,8 @@ def print_character(character):
 
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(elf)
+    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
+    print(dwarf)
 
     human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
     print(human)
