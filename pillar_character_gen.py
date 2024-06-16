@@ -1,6 +1,6 @@
 from main import roll_dice
 from enum import Enum
-
+VERSION = 1
 
 class BaseTypes(Enum):
     MENTAL = "Mental"
@@ -16,7 +16,8 @@ class RaceTypes(Enum):
     """
     HUMAN = [2, 8, 0, 0]  # number of rolls, side of die, physical modifier, mental modifier
     ELF = [6, 6, 0, 0]
-    DWARF = [6, 6, 3, -2]
+    DWARF = [6, 6, 2, -1]
+
 
 """ 
    attribute modifier dictionary 
@@ -44,6 +45,7 @@ modifiers = {3: -4, 4: -3, 5: -2, 6: -1, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 
 class Character:
 
     def __init__(self, race, base_preference):
+        self.version = VERSION
         self.race = race
         self.base_preference = base_preference
         self.physical_base, self.mental_base, self.base_rolls = get_bases(race, base_preference)
@@ -61,6 +63,8 @@ class Character:
         self.hit_points = self.strength + self.constitution
         self.fatigue_points = self.constitution + self.dexterity + self.wisdom
         self.movement = self.strength + self.dexterity + self.constitution
+        if RaceTypes.DWARF:
+            self.movement = self.movement / 2
 
         # nothing less than 3, anything over 18 converts to decimal increments e.g. 19 -> 18.1
         self.strength = cap(self.strength)
@@ -87,8 +91,8 @@ class Character:
             int(self.personality_modifier)]
 
     def __str__(self):
-        return (f"Character race: {self.race.name.capitalize()}\n"
-                f"Level: {self.level} \n"  
+        return (f"Character race: {self.race.name.capitalize()}   Version: {VERSION} \n"
+                f"Level: {self.level} \n"
                 f"Physical base: {self.physical_base}, Mental base: {self.mental_base} (rolls: {self.base_rolls} )  Base priority: {self.base_preference.value}\n"
                 f"Strength: {self.strength} (rolls: {self.strength_rolls}) base: {self.physical_base}\n"
                 f"Intelligence: {self.intelligence} (rolls: {self.intelligence_rolls}) base: {self.mental_base}\n"
@@ -103,14 +107,16 @@ class Character:
                 f"Action Points (before skill modifier) {self.action_point_base} \n"
                 f"Movement: {self.movement} \n")
 
+
     def level_up(self, level: int = 1) -> None:
         for x in range(level):
             self.level += 1
-            hit_point_roll = roll_dice(6,1  )
+            hit_point_roll = roll_dice(6, 1)
             self.hit_points += hit_point_roll[0] + modifiers[self.constitution]
-            fatigue_point_roll = roll_dice(6,1  )
+            fatigue_point_roll = roll_dice(6, 1)
             self.fatigue_points += fatigue_point_roll[0] + modifiers[self.constitution]
             self.total_skill_points += self.level
+
 
 def cap(attribute):
     """ if attribute is greater than 18 use old school D&D where you need 10 additional points to get to next
@@ -144,8 +150,8 @@ def get_bases(race=RaceTypes.HUMAN, base_preference=BaseTypes.PHYSICAL):
         physical_base = base[index_of_highest] + physical_modifier
         mental_base = base[index_of_highest - 1] + mental_modifier
     else:
-        mental_base = base[index_of_highest] + physical_modifier
-        physical_base = base[index_of_highest - 1] + mental_modifier
+        mental_base = base[index_of_highest] + mental_modifier
+        physical_base = base[index_of_highest - 1] + physical_modifier
 
     return physical_base, mental_base, base
 
@@ -159,7 +165,6 @@ def roll_attribute(base_modifier):
 def print_character(character):
     print("Name: ______________")
     print("Age: _____")
-    print("")
     print("Description: ______________")
 
     print("")
@@ -169,53 +174,55 @@ def print_character(character):
     print("Skills")
     print("____________________________________________________________________________")
     print("____________________________________________________________________________")
-
     print("")
 
     print("Weapons")
     print("")
-    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
-    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
+    print("Type:________ Min Reach:[ ] Max Reach:[   ] Damage:[   ] % Break[ ]")
+    print("[hit][crit]:  AC 0 [ ][ ] AC 1 [ ][ ] AC 2 [ ][ ] AC 3 [ ][ ] AC 4 [ ][ ]")
+    print("Type:________ Min Reach:[ ] Max Reach:[   ] Damage:[   ] % Break[ ]")
+    print("[hit][crit]:  AC 0 [ ][ ] AC 1 [ ][ ] AC 2 [ ][ ] AC 3 [ ][ ] AC 4 [ ][ ]")
+    print("Type:________ Min Reach:[ ] Max Reach:[   ] Damage:[   ] % Break[ ]")
+    print("[hit][crit]:  AC 0 [ ][ ] AC 1 [ ][ ] AC 2 [ ][ ] AC 3 [ ][ ] AC 4 [ ][ ]")
+    print("Type:________ Min Reach:[ ] Max Reach:[   ] Damage:[   ] % Break[ ]")
+    print("[hit][crit]:  AC 0 [ ][ ] AC 1 [ ][ ] AC 2 [ ][ ] AC 3 [ ][ ] AC 4 [ ][ ]")
     print("")
-    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
-    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
-    print("")
-    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
-    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
-    print("")
-    print("Type:________ Min Reach:________ Max Reach:_______ Damage:___________ % Break______")
-    print("[ hit ][ crit ]:  AC 0 [  ][  ]  AC 1 [  ][  ] AC 2 [  ][  ] AC 3 [  ][  ] AC 4 [  ][  ]")
-    print("")
+
     print("Armour  AC:[  ] ")
-    print("")
     print(" Head:  __________________________ Torso __________________________")
     print(" Arms   __________________________ Legs  __________________________")
     print("")
     print("Notes")
-    print("____________________________________________________________________________")
-    print("____________________________________________________________________________")
-    print("____________________________________________________________________________")
-    print("____________________________________________________________________________")
-    print("____________________________________________________________________________")
 
     print(chr(12), end='')
 
 
 if __name__ == "__main__":
-    elf = Character(RaceTypes.ELF, BaseTypes.MENTAL)
-    print(elf)
+    c = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print_character(c)
+    c = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print_character(c)
+    c = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print_character(c)
+    c = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print_character(c)
+    c = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    c.level_up(5)
+    print_character(c)
 
-    human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
-    print(human)
-
-"""
-        print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
-        print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL))
-        print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL))
-        print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL))
-        print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL))
-        print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL))
-"""
+'''
+    print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL).level_up(4))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL).level_up(4))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.MENTAL).level_up(4))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.ELF, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.ELF, BaseTypes.MENTAL).level_up(4))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.PHYSICAL).level_up(4))
+    print_character(Character(RaceTypes.DWARF, BaseTypes.MENTAL).level_up(4))
+'''
 
 '''
 print(Character(RaceTypes.ELF, BaseTypes.PHYSICAL))
