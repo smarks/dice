@@ -1,62 +1,61 @@
-# Getting Started with Pillars 
-Vision: 01
+# Getting Started with Pillars
+Version 03
 ## Table of Contents
 - [Characters](#characters "Characters")
-   * [Attributes](#attributes "Attributes")
-	  + [Some Terminology](#some-terminology "Some Terminology")
-	  + [_quick understanding check_](#quick-understanding-check "quick understanding check")
-	  + [Attribute Modifiers ](#attribute-modifiers "Attribute Modifiers")
+   - [Attributes](#attributes "Attributes")
+	  - [Some Terminology](#some-terminology "Some Terminology")
+	  - [_quick understanding check_](#quick-understanding-check "quick understanding check")
+	  - [Attribute Modifiers ](#attribute-modifiers "Attribute Modifiers")
 		 - [Pluses | Minuses / Bonuses | Malus](#pluses-minuses-bonuses-malus)
-	  + [Attributes and Skills](#attributes-and-skills "Attributes and Skills")
-	  + [Physical and a mental base](#physical-and-a-mental-base "Physical and a mental base")
-   * [Skill Points](#skill-points "Skill Points")
-	  + [Starting action points ](#starting-action-points "Starting action points")
+	  - [Attributes and Skills](#attributes-and-skills "Attributes and Skills")
+	  - [Physical and a mental base](#physical-and-a-mental-base "Physical and a mental base")
+   - [Skill Points](#skill-points "Skill Points")
+	  - [Starting action points ](#starting-action-points "Starting action points")
 		 - [Skill Point  progression.](#skill-point-progression)
-   * [Hit Points and Fatigue Points](#hit-points-and-fatigue-points "Hit Points and Fatigue Points")
-	  + [Starting Hit Points](#starting-hit-points "Starting Hit Points")
+   - [Hit Points and Fatigue Points](#hit-points-and-fatigue-points "Hit Points and Fatigue Points")
+	  - [Starting Hit Points](#starting-hit-points "Starting Hit Points")
 		 - [Hit Point progression.](#hit-point-progression "Hit Point progression.")
-	  + [Starting Fatigue Points](#starting-fatigue-points "Starting Fatigue Points")
+	  - [Starting Fatigue Points](#starting-fatigue-points "Starting Fatigue Points")
 		 - [Fatigue point progression:](#fatigue-point-progression "Fatigue point progression:")
-	  + [Fatigue](#fatigue "Fatigue")
-	  + [Hit Points](#hit-points "Hit Points")
-	  + [Death](#death "Death")
-   * [Character Races](#character-races "Character Races")
+	  - [Fatigue](#fatigue "Fatigue")
+	  - [Hit Points](#hit-points "Hit Points")
+	  - [Death](#death "Death")
+   - [Character Races](#character-races "Character Races")
 - [Character Generation](#character-generation "Character Generation")
-	  + [Pick a race](#pick-a-race "Pick a race")
-	  + [Characters have a physical and a mental base.](#characters-have-a-physical-and-a-mental-base "Characters have a physical and a mental base.")
-	  + [Determine attributes](#determine-attributes "Determine attributes")
-	  + [Starting skill points](#starting-skill-points "Starting skill points")
+	  - [Pick a race](#pick-a-race "Pick a race")
+	  - [Characters have a physical and a mental base.](#characters-have-a-physical-and-a-mental-base "Characters have a physical and a mental base.")
+	  - [Determine attributes](#determine-attributes "Determine attributes")
+	  - [Starting skill points](#starting-skill-points "Starting skill points")
 - [Action Points](#action-points "Action Points")
-	  + [Movement ](#movement "Movement")
-	  + [0  (Free Actions)](#0-free-actions)
-	  + [1](#1 "1")
-	  + [2](#2 "2")
-	  + [3](#3 "3")
-	  + [4](#4 "4")
-	  + [5](#5 "5")
-   * [Movement](#movement-1)
-   * [Combat](#combat "Combat")
-	  + [Notes:](#notes "Notes:")
-	  + [Fighting two handed](#fighting-two-handed "Fighting two handed")
-	  + [Min and Max Rolls](#min-and-max-rolls "Min and Max Rolls")
-	  + [Critical Hits](#critical-hits "Critical Hits")
-	  + [Misc](#misc "Misc")
+	  - [Movement ](#movement "Movement")
+	  - [0  (Free Actions)](#0-free-actions)
+	  - [1](#1 "1")
+	  - [2](#2 "2")
+	  - [3](#3 "3")
+	  - [4](#4 "4")
+	  - [5](#5 "5")
+   - [Movement](#movement-1)
+   - [Combat](#combat "Combat")
+	  - [Notes:](#notes "Notes:")
+	  - [Fighting two handed](#fighting-two-handed "Fighting two handed")
+	  - [Min and Max Rolls](#min-and-max-rolls "Min and Max Rolls")
+	  - [Critical Hits](#critical-hits "Critical Hits")
+	  - [Misc](#misc "Misc")
 - [Experience ](#experience "Experience")
 - [Lists and Tables](#lists-and-tables "Lists and Tables")
-   * [Common Skills](#common-skills "Common Skills")
-	  + [Martial Related Skills](#martial-related-skills "Martial Related Skills")
-	  + [Academic Skills](#academic-skills "Academic Skills")
-	  + [Arcane Related Skills](#arcane-related-skills "Arcane Related Skills")
-	  + [Craft Related Skills](#craft-related-skills "Craft Related Skills")
-	  + [Wilderness Survival  Related Skills](#wilderness-survival-related-skills)
-	  + [Labor Related Skills](#labor-related-skills "Labor Related Skills")
-	  + [Skills of Manipulation](#skills-of-manipulation "Skills of Manipulation")
-	  + [Healing Related](#healing-related "Healing Related")
-	  + [Deity Affiliation](#deity-affiliation "Deity Affiliation")
-   * [Glossary ](#glossary "Glossary")
-	  + [Demon Die ](#demon-die "Demon Die")
+   - [Common Skills](#common-skills "Common Skills")
+	  - [Martial Related Skills](#martial-related-skills "Martial Related Skills")
+	  - [Academic Skills](#academic-skills "Academic Skills")
+	  - [Arcane Related Skills](#arcane-related-skills "Arcane Related Skills")
+	  - [Craft Related Skills](#craft-related-skills "Craft Related Skills")
+	  - [Wilderness Survival  Related Skills](#wilderness-survival-related-skills)
+	  - [Labor Related Skills](#labor-related-skills "Labor Related Skills")
+	  - [Skills of Manipulation](#skills-of-manipulation "Skills of Manipulation")
+	  - [Healing Related](#healing-related "Healing Related")
+	  - [Deity Affiliation](#deity-affiliation "Deity Affiliation")
+   - [Glossary ](#glossary "Glossary")
+	  - [Demon Die ](#demon-die "Demon Die")
 
-		 
 # Characters
 A character can be anything. There are no predefined character classes. There are only skills and attributes (characteristics)  which affect how good a character is at specific activities.
 If you find this is too open, character templates are available.
@@ -205,8 +204,6 @@ Skills can anything. If it is not obvious, e.g. Bastard Sword Parry +1, discuss 
 
 If more than skill gives the same bonus, only the skill with the highest bonus is applied.
 
-
-
 ## Hit Points and Fatigue Points
 Fatigue is your endurance. Your energy level. The harder or longer an activity is, the more endurance is required.  The sum of your attributes are your starting fatigue points . Each level add the results of a d6 + the sum of attribute malus or bonus from race (see below) and attributes as you apply your characters constitution malus or bonus to this roll.
 
@@ -257,35 +254,15 @@ Jake has a con 12 and 20 hit points. He loses 35 hit points over the course of a
 ## Character Races
 Currently races include
 
-- **Humans** (wide ranging in all manner of characteristics) Come in a variety of flavors depending on region. No malus or bonuses except by region - see GM for details.
-		examples:
-		- descendant from old empire
-		        - cty dweller
-		                - mountains, Woods
-		                - highlands
+**Humans** (wide ranging in all manner of characteristics) Come in a variety of flavors depending on region. No malus or bonuses except by region - see GM for details.
+examples:
+descendant from old empire, city dweller, mountains, woods, highlands, low lands
 
-- **Elves** 
-		- **Wood** smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. Ill tempered towards any that share their values. constitution +1, wood lore skill +2
-		
-		- **High** Typically taller, more slender than typical humans who don't seem to age. Considered wise and intelligent but often also skilled in various martial arts (in the most general sense of the term). Aloof isolationists. Not often encountered. Sometimes a lone high elf will seek the company of other races.  constitution +2
+**Elves** 
+- Wood Elf smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. Ill tempered towards any that share their values.  wood lore skill +2 
+- High Elf Typically taller, more slender than typical humans who don't seem to age. Considered wise and intelligent but haughty and aloof.  Often also skilled in various martial arts (in the most general sense of the term). Aloof isolationists. Not often encountered. Sometimes a lone high elf will seek the company of other races.  constitution +2
 
-- **Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1, strength +1, -1 dex, -1 personality +1 craftsmanship
-
-- **Gnomes** Similar to dwarves but lesser in all respects including their dislike for other races and direct opposite in disposition to their cousins the dwarves. Note: dwarves typically  look down about Gnomes while Gnomes typically roll their eyes at their less gregarious cousins. Beards are typical for males, but not always worn. Female Gnomes are obvious. constitution +1, strength +1,  intelligence or wisdom +1
-
-Draft —
-- **Fae**  A magical folk who typically keep to themselves but sometimes venture into human society either out of curiosity or perhaps a Geas. Malus and bonuses vary - see games master.
-
-- **Small Folk** Not Hobbits, Not halflings, humanoids of dominative statue, not as stout as Dwarves but more nimble and clever. Not worldly. Isolationist. Rarely encountered. Sometimes mixed up with gnomes to neither their or the Gnomes amusement. str -2, dex +1, per +1
-
-- \*\*Hill People \*\*  rough, doughty, ill tempered, focus on the physical and the mental less so. Typical do not mix well with other races living in wild and untamed places. Str +2, con +2, dex + 1, personality -3, intelligence or wisdom -1
-
-- \*\*Snake People \*\* Clearly a race of being far different than other humanoids. Also called Lizard Men and Dragon Spawn. Some say they are result of a fae and dragon coupling although there is only vague speculation on that would really work. Given the different natures of each. Snake people are generally taller, and heavier than other races including all but the most robust Hill people, but there are also variations. In one extreme, a snake person can appear extremely lizard like in skin texture and pattern and claw like hands and feet to the other extreme where they present as shallow skinned humans.  Some say these physical manifestations are phases in their growth while others speculate that there are different classes of Snake People.
-
-		Often viewed by other races as haughty bullies and sometimes thuggish.  They do possess superior mental and physical attributes.  Amongst themselves they subscribe to a strong well formulated cultural and political hierarchy which is largely opaque to outsiders.  Snake people rarely go mingle with other races, when they do, it is typically because an individual has either been ostracized from their community or completing an initiation rite that entails learning about as much as they can from outside of their community. There communities themselves are typically secreted away and not accessible to outsiders. The old empire was said to be organized and run by a  Cabal of Snake people  but that was in the distant past, and certainly the old empire's population and those that are considered descendants of the old empire are humans. 
-		
-		Attribute modifiers are not public
---
+**Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1 craftsmanship
 
 # Character Generation
 ### Pick a race
@@ -355,6 +332,7 @@ Starting Skill Points: 11
 Total Skill Points: 11 
 Action Points (before skill modifier) 6 
 Movement: 29 
+
 ### Starting skill points
 Add physical and mental base to get your starting skill points.
 You can use these points for skills but one type of skill is increasing your character attributes. The skill point cost for increasing character attributes works a bit different than most other skills. Here's how it differs.
@@ -365,17 +343,17 @@ You can use these points for skills but one type of skill is increasing your cha
 - Attributes that are 17 cost 4 skill point to increase by 1 for the first level and then doubled for each additional increase.  8 for level 2, 16 for level 3 etc.
 - Attributes that 18 or greater  cost 5 skill point to increase by 1 for the first level and then doubled for each additional increase.  5, 10, 15
 
-|               |       |       |       |       |       |
-| ------------- | ----- | ----- | ----- | ----- | ----- |
-|               |       |       |       |       |       |
-|               | **Skill Level**                   |||||
-| **Attribute** | **1** | **2** | **3** | **4** | **5** |
-| **\\\> 11**   | 1     | 2     | 4     | 8     | 16    |
-| **12-15**     | 2     | 4     | 8     | 16    | 32    |
-| **16**        | 3     | 6     | 12    | 24    | 48    |
-| **17**        | 4     | 8     | 16    | 32    | 64    |
-| **18 \\\<**   | 5     | 10    | 20    | 40    | 80    |
-|               | **Required Skill Points**         |||||
+|                         |       |       |       |       |       |
+| ----------------------- | ----- | ----- | ----- | ----- | ----- |
+|                         |       |       |       |       |       |
+|                         | **Skill Level**                   |||||
+| **Attribute**           | **1** | **2** | **3** | **4** | **5** |
+| **\\\\\\\\\\\\\\\> 11** | 1     | 2     | 4     | 8     | 16    |
+| **12-15**               | 2     | 4     | 8     | 16    | 32    |
+| **16**                  | 3     | 6     | 12    | 24    | 48    |
+| **17**                  | 4     | 8     | 16    | 32    | 64    |
+| **18 \\\\\\\\\\\\\\\<** | 5     | 10    | 20    | 40    | 80    |
+|                         | **Required Skill Points**         |||||
 
 
 Here's an example.  Consider this character:
@@ -407,45 +385,52 @@ You spend 8 skill points  to get to Str 14
 Every character has action points. Action points allow a character to do something when the game is a turned based mode.
 
 (The game becomes turned based when individual actions matter).
+Todo 
+ Characters start with 6 AP, add attribute and skill bonuses/malus, and subtract armor and shield encumbrance.
 
-\*\* Characters start with 6 AP, add attribute and skill bonuses/malus, and subtract armor and shield encumbrance.
-
-When the game becomes turns based, each player rolls a d6/2 round down and adds that value to their total number of action points.
+When the game becomes turns based, each player rolls a d4 and adds that value to their total number of action points.
 That number is their initiative roll.
+
+
 The first turn proceeds with the character who has the highest initiative roll.
+
 Action with characters with tied initiative roll happen simultaneously.
+
 Subsequent turn order is determined by total action points, The character with the most points goes first etc. (the initiative roll is only used to determine who goes first on the first term.) 
 
 If characters act simultaneously and they each choose action the whose outcome is effected by the other characters ‘state’ then the character with the high dex gets the advantage if characters have the same dex both players roll a d20 until one player rolls higher then the other player. 
+
 Here’s an example:
+
 Two characters go simultaneously
+
 One chooses to step closed, the other chooses to strike.  
+
 At what range does the strike occur, the range before the step or the range after?
+
 If the character striking has the higher dex, (or equal dex and rolls higher on a d20) the strike at the range they prefer, 
+
 If the character striking has a lower dex (or equal dex and rolls lower on a d20) they strike at the range preferred by the character who is stepping close, 
 If after the simultaneous original action,, both characters have the same number of action points, the next action is also simultaneous.
 
-The character with the highest AP goes first. They can use as many Action Points as they wish until their number of action points is equal or lower than the next highest character.(if equal and they choose to use an AP the action is simultaneous.
+When combat begins, the game is said to one in Turn based mode. 
+
+**Turn One**
+
+At the beginning of the first turn, characters range are +1 of max range of the longest reach weapon. 
 
 e.g.
-Fred has 8 points and rolls a d6 gets 1  / 2 round down for a 0 modifier for initiative roll and end up with an 8 for initiative
-Joe has 6 and rolls a d6 gets 6 /2 for 3 additional initiative points for a total of nine 9 for initiative
-Fran as 4 and rolls a d6 gets 5 /2 round down 2  for a total of  6 initiative points.
 
-Joe goes first. He spends 2 for a light weapon attack. He is at 4 points now. ( 2 - total action points of 6 = 4)
-Fred is at 8 so he can parry and he does for -1. Now he's at 7 and has the most points. He can swing for 2 at Joe. Now he is at 5 and Joe is at 4. Joe can't do anything yet.
-Fran has the most points so she can spend 2 and swing at Joe. Now she's at 4 and Joe is at 4. He can parry Fran. He does. Now he's at 3.
-Fran is at 4
-Joe is at 4 3
-Fred is at 5
-Fred goes. He swings at Fran. He's at 3 now. Fran is at 4 - she spends 1 to parry She's at 3 now.
-Joe is at 3
-Fran is at 3
-Fred is at 3
-Everyone goes at the same time.
+Jonas a greatsworder who AP of 8  and Pete who wields a broadsword and 7 AP  face off. 
 
+Jonas has the longest weapon, a great sword with a max reach of 5. In this situation, characters would start at range 6. 
+ 
+The character with the highest AP + initiative roll goes first. Jonas has the highest AP so he goes first. He can use up to many AP points as available to  do single acton
+** Round One**
 
-### Movement
+A round is a unit where all characters have the opportunity to spend APs to do something. 
+
+### Movement. Todo
 If you are out striking distance of opponent you can disengage which costs 1. On next initiative you can use full movement to move. However, any enemy spend all their actions to close and strike. If you decide to use an AP to defend yourselfx` lose the  disengage`
 
 
@@ -642,8 +627,7 @@ Roll a D20
 1-10 regular body damage (ok so not that nasty; maybe next time). 
 11-16 bleeding +1 for demon die turns or until staunched 
 17-19 bleeding demon die for demon die turns or until staunched. 
-20  bludgeon weapons - bone crush, cutting - severed head, neck = dead limb bleeding at d8 per turn  
-
+  
 
 ### Misc
 Shields cost 1 ap
