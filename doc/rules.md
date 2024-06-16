@@ -1,10 +1,9 @@
 # Getting Started with Pillars
-Version 03
+#### Version 04
 ## Table of Contents
 - [Characters](#characters "Characters")
    - [Attributes](#attributes "Attributes")
 	  - [Some Terminology](#some-terminology "Some Terminology")
-	  - [_quick understanding check_](#quick-understanding-check "quick understanding check")
 	  - [Attribute Modifiers ](#attribute-modifiers "Attribute Modifiers")
 		 - [Pluses | Minuses / Bonuses | Malus](#pluses-minuses-bonuses-malus)
 	  - [Attributes and Skills](#attributes-and-skills "Attributes and Skills")
@@ -44,17 +43,8 @@ Version 03
 - [Experience ](#experience "Experience")
 - [Lists and Tables](#lists-and-tables "Lists and Tables")
    - [Common Skills](#common-skills "Common Skills")
-	  - [Martial Related Skills](#martial-related-skills "Martial Related Skills")
-	  - [Academic Skills](#academic-skills "Academic Skills")
-	  - [Arcane Related Skills](#arcane-related-skills "Arcane Related Skills")
-	  - [Craft Related Skills](#craft-related-skills "Craft Related Skills")
-	  - [Wilderness Survival  Related Skills](#wilderness-survival-related-skills)
-	  - [Labor Related Skills](#labor-related-skills "Labor Related Skills")
-	  - [Skills of Manipulation](#skills-of-manipulation "Skills of Manipulation")
-	  - [Healing Related](#healing-related "Healing Related")
-	  - [Deity Affiliation](#deity-affiliation "Deity Affiliation")
    - [Glossary ](#glossary "Glossary")
-	  - [Demon Die ](#demon-die "Demon Die")
+	  
 
 # Characters
 A character can be anything. There are no predefined character classes. There are only skills and attributes (characteristics)  which affect how good a character is at specific activities.
@@ -628,7 +618,6 @@ Roll a D20
 11-16 bleeding +1 for demon die turns or until staunched 
 17-19 bleeding demon die for demon die turns or until staunched. 
   
-
 ### Misc
 Shields cost 1 ap
 Modifiers apply to hit and critical rolls 
@@ -766,3 +755,14 @@ Remember 5 and roll again.
 Get a 6 add 5 for for a total of 10
 Roll again get a 3
 Add 3 to 10 for grand total of 13
+### Effective (some attribute)
+E.g "Effective Dex"
+Refers the character's attribute after all modifiers have been applied. 
+### Fatigue Point
+A unit of measure that reflects a beings stamina. 
+### Hit Point 
+A unit of measure that reflects a beings capacity to be bodily or mentally damaged. 
+### Nat Twenty 
+Natural twenty.
+When you roll a d20 and roll a 20. 
+If your adjusted roll is 20 (e.g. roll 18 + 2 bonus) that's not a nat twenty. 
