@@ -1,3 +1,60 @@
+# Getting Started with Pillars 
+
+## Table of Contents
+- [Characters](#characters "Characters")
+   * [Attributes](#attributes "Attributes")
+	  + [Some Terminology](#some-terminology "Some Terminology")
+	  + [_quick understanding check_](#quick-understanding-check "quick understanding check")
+	  + [Attribute Modifiers ](#attribute-modifiers "Attribute Modifiers")
+		 - [Pluses | Minuses / Bonuses | Malus](#pluses-minuses-bonuses-malus)
+	  + [Attributes and Skills](#attributes-and-skills "Attributes and Skills")
+	  + [Physical and a mental base](#physical-and-a-mental-base "Physical and a mental base")
+   * [Skill Points](#skill-points "Skill Points")
+	  + [Starting action points ](#starting-action-points "Starting action points")
+		 - [Skill Point  progression.](#skill-point-progression)
+   * [Hit Points and Fatigue Points](#hit-points-and-fatigue-points "Hit Points and Fatigue Points")
+	  + [Starting Hit Points](#starting-hit-points "Starting Hit Points")
+		 - [Hit Point progression.](#hit-point-progression "Hit Point progression.")
+	  + [Starting Fatigue Points](#starting-fatigue-points "Starting Fatigue Points")
+		 - [Fatigue point progression:](#fatigue-point-progression "Fatigue point progression:")
+	  + [Fatigue](#fatigue "Fatigue")
+	  + [Hit Points](#hit-points "Hit Points")
+	  + [Death](#death "Death")
+   * [Character Races](#character-races "Character Races")
+- [Character Generation](#character-generation "Character Generation")
+	  + [Pick a race](#pick-a-race "Pick a race")
+	  + [Characters have a physical and a mental base.](#characters-have-a-physical-and-a-mental-base "Characters have a physical and a mental base.")
+	  + [Determine attributes](#determine-attributes "Determine attributes")
+	  + [Starting skill points](#starting-skill-points "Starting skill points")
+- [Action Points](#action-points "Action Points")
+	  + [Movement ](#movement "Movement")
+	  + [0  (Free Actions)](#0-free-actions)
+	  + [1](#1 "1")
+	  + [2](#2 "2")
+	  + [3](#3 "3")
+	  + [4](#4 "4")
+	  + [5](#5 "5")
+   * [Movement](#movement-1)
+   * [Combat](#combat "Combat")
+	  + [Notes:](#notes "Notes:")
+	  + [Fighting two handed](#fighting-two-handed "Fighting two handed")
+	  + [Min and Max Rolls](#min-and-max-rolls "Min and Max Rolls")
+	  + [Misc](#misc "Misc")
+- [Experience ](#experience "Experience")
+- [Lists and Tables](#lists-and-tables "Lists and Tables")
+   * [Common Skills](#common-skills "Common Skills")
+	  + [Martial Related Skills](#martial-related-skills "Martial Related Skills")
+	  + [Academic Skills](#academic-skills "Academic Skills")
+	  + [Arcane Related Skills](#arcane-related-skills "Arcane Related Skills")
+	  + [Craft Related Skills](#craft-related-skills "Craft Related Skills")
+	  + [Wilderness Survival  Related Skills](#wilderness-survival-related-skills)
+	  + [Labor Related Skills](#labor-related-skills "Labor Related Skills")
+	  + [Skills of Manipulation](#skills-of-manipulation "Skills of Manipulation")
+	  + [Healing Related](#healing-related "Healing Related")
+	  + [Deity Affiliation](#deity-affiliation "Deity Affiliation")
+
+<!-- TOC end -->
+
 # Characters
 A character can be anything. There are no predefined character classes. There are only skills and attributes (characteristics)  which affect how good a character is at specific activities.
 If you find this is too open, character templates are available.
@@ -69,7 +126,7 @@ Which rolls would make Fred and his player happy?
 - 15 or higher
 - 12 or lower
 
-### Attribute Modifiers 
+### Attribute Modifiers
 #### Pluses | Minuses / Bonuses | Malus
 
 The following bonus(+) or malus(-) are applied to any activity that relies on a specific attribute.
@@ -121,11 +178,11 @@ Draft —
 ## Skill Points
 Skill points are used to learn just about anything. The more skill points you have in a specific skill, the better you are at it. Typically skills cost 1 skill point for level one skills, 2 skill points for level 2 and so on. You need skills be more effective with just about anything you want to do. If you don't have a skill and try an activity, you do so with skill 0 which is entirely possible (you aren't prevent from trying) but you won't be very good at it.
 
-### Starting action points 
+### Starting action points
 6 + str bonus + dex bonus + con bonus + highest bonus from a skill - armor and shield encumbrance
 For most "actiony" skills, the bonus is skill / 3. Action point bonuses occur at skills 2, 5, and 8
 
-####  Skill Point  progression.
+#### Skill Point  progression.
  You get 1 skill point per sub-level ([experience below](#experience "Experience ")) 
 
 Skills can anything you'd like your character to be better at. Here are some common examples:
@@ -267,13 +324,13 @@ Keep track of:
 
 Character race: Human
 Level: 1 
-Physical base: 2, Mental base: 2 (rolls: [2, 2] )  Base priority: Physical
-Strength: 11 (rolls: [3, 6]) base: 2
-Intelligence: 7 (rolls: [1, 4]) base: 2
-Wisdom: 6 (rolls: [1, 3]) base: 2
-Dexterity: 10 (rolls: [4, 4]) base: 2
-Constitution: 7 (rolls: [4, 1]) base: 2
-Personality: 10 (rolls: [2, 6]  base: 2
+Physical base: 2, Mental base: 2 (rolls: [2, 2](#) )  Base priority: Physical
+Strength: 11 (rolls: [3, 6](#)) base: 2
+Intelligence: 7 (rolls: [1, 4](#)) base: 2
+Wisdom: 6 (rolls: [1, 3](#)) base: 2
+Dexterity: 10 (rolls: [4, 4](#)) base: 2
+Constitution: 7 (rolls: [4, 1](#)) base: 2
+Personality: 10 (rolls: [2, 6](#)  base: 2
 Hit Points: 18 
 Fatigue Points: 23 
 Starting Skill Points: 4 
@@ -311,11 +368,11 @@ You can use these points for skills but one type of skill is increasing your cha
 |               |       |       |       |       |       |
 |               | **Skill Level**                   |||||
 | **Attribute** | **1** | **2** | **3** | **4** | **5** |
-| **\> 11**     | 1     | 2     | 4     | 8     | 16    |
+| **\\\> 11**   | 1     | 2     | 4     | 8     | 16    |
 | **12-15**     | 2     | 4     | 8     | 16    | 32    |
 | **16**        | 3     | 6     | 12    | 24    | 48    |
 | **17**        | 4     | 8     | 16    | 32    | 64    |
-| **18 \<**     | 5     | 10    | 20    | 40    | 80    |
+| **18 \\\<**   | 5     | 10    | 20    | 40    | 80    |
 |               | **Required Skill Points**         |||||
 
 
@@ -386,7 +443,7 @@ Fred is at 3
 Everyone goes at the same time.
 
 
-### Movement 
+### Movement
 If you are out striking distance of opponent you can disengage which costs 1. On next initiative you can use full movement to move. However, any enemy spend all their actions to close and strike. If you decide to use an AP to defend yourselfx` lose the  disengage`
 
 
@@ -519,29 +576,29 @@ All three people are disengaged. Engagement happens when a combat moves into str
 Jake goes first.
  
 
-|                      |                               |                               |                                    |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
-| -------------------- | ----------------------------- | ----------------------------- | ---------------------------------- | ---------------------------- | ------------------------------ | ----------------------------------- | ------------------------------------- | ----------------------------------- | ------------------------------------ | ------------------------------------ | -------------------------------------- | ---------------------------------- | ------------------------------------ |
-| **Weapon Types**     |                               |                               | **Armour Class**                   | **0 None** Robes, basic clothes, nakedness **No Modifiers ** || **1 Light ** Leather and treated cloth **-2 damage ** **-1 AP** **-1 Dex** || **2 Medium** Mix of leather and chain **-4 damage ** **-2 AP** **-2 Dex** || **2 Heavy** Metal mix of chain and metal **-6 damage ** **-3 AP** **-3 Dex** || **3 Full Plate** Basically a tin can **-8 damage ** **-5 AP** **-5 Dex** ||
-|                      | **Min Reach**                 | **Max Reach**                 | **Damage Notes**                   | **Hit**                      | **Crit**                       | **Hit**                             | **Crit**                              | **Hit**                             | **Crit**                             | **Hit**                              | **Crit**                               | **Hit**                            | **Crit**                             |
-| **Light Weapons **   | Small, always one handed (dagger, hand axe, hammer, shuriken, small bow, light spear)            |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
-| **2 AP**             |                               |                               |                                    |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
-| **Stabbing**         | 0                             | 1                             | d4 +1                              | 16                           | 7                              | 15                                  | 14                                    | 14                                  | 18                                   | 13                                   | 19                                     | 20                                 | 20                                   |
-| **Striking**         | 1                             | 2                             | d6                                 | 17                           | 13                             | 16                                  | 16                                    | 15                                  | 18                                   | 14                                   | 19                                     | 18                                 | 20                                   |
-| **Blunt**            | 1                             | 3                             | d6 -3 absorb                       | 17                           | 15                             | 16                                  | 17                                    | 15                                  | 18                                   | 14                                   | 19                                     | 18                                 | 20                                   |
-| **Thursting**        | 2                             | 4                             | d4                                 | 17                           | 10                             | 16                                  | 16                                    | 15                                  | 17                                   | 13                                   | 18                                     | 19                                 | 20                                   |
-| **Missle**           | D6 -1 to hit per  20ft (4 inches) Min Dex 12                                                     ||| 19                           | 12                             | 18                                  | 18                                    | 19                                  | 15                                   | 20                                   | 20                                     | 20                                 | 20                                   |
-| **Medium Weapons**   | Typical size sometimes can be used two handed (bastard sword, battle axe, glaive, spear, mace)   |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
-| **3 AP**             |                               |                               |                                    |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
-| **Striking**         | 2                             | 4                             | D8 +1                              | 15                           | 15                             | 14                                  | 16                                    | 12                                  | 17                                   | 10                                   | 18                                     | 19                                 | 19                                   |
-| **Blunt**            | 2                             | 4                             | d8 -4 absorb                       | 15                           | 15                             | 14                                  | 16                                    | 11                                  | 18                                   | 8                                    | 18                                     | 17                                 | 19                                   |
-| **Thrusting **       | 3                             | 5                             | d8                                 | 15                           | 14                             | 14                                  | 15                                    | 12                                  | 16                                   | 10                                   | 16                                     | 18                                 | 19                                   |
-| **Missle **          | D8  -1 to hit per  30ft (6 inches) Min Str 14  Min Dex 14 3 rounds to ready                      ||| 20                           | 11                             | 19                                  | 17                                    | 20                                  | 14                                   | 21                                   | 19                                     | 21                                 | 20                                   |
-| **Heavy Weapons **   | Large awkward always two handed (great sword, great axe, pole arms, giant club)                  |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
-| **4 AP**             |                               |                               |                                    |                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
-| **Striking**         | 3                             | 5                             | d10                                | 16                           | 14                             | 15                                  | 15                                    | 13                                  | 16                                   | 10                                   | 17                                     | 10                                 | 18                                   |
-| **Blunt**            | 3                             | 5                             | D10 +2 -5 absorb                   | 16                           | 14                             | 15                                  | 15                                    | 12                                  | 17                                   | 8                                    | 17                                     | 6                                  | 18                                   |
-| **Thrusting **       | 4                             | 6                             | d8 +2                              | 16                           | 13                             | 15                                  | 14                                    | 13                                  | 16                                   | 10                                   | 15                                     | 10                                 | 18                                   |
-| **Missle **          | D8 + 2 -1 to hit per  40ft (8 inches) Min Str 15  Min Dex 14  1 turn to ready                    ||| 21                           | 9                              | 20                                  | 15                                    | 20                                  | 13                                   | 21                                   | 17                                     | 21                                 | 18                                   |
+|                    |                               |                               |                                  |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
+| ------------------ | ----------------------------- | ----------------------------- | -------------------------------- | ---------------------------- | ------------------------------ | ----------------------------------- | ------------------------------------- | ----------------------------------- | ------------------------------------ | ------------------------------------ | -------------------------------------- | ---------------------------------- | ------------------------------------ |
+| **Weapon Types**   |                               |                               | **Armour Class**                 | **0 None** Robes, basic clothes, nakedness **No Modifiers ** || **1 Light ** Leather and treated cloth **-2 damage ** **-1 AP** **-1 Dex** || **2 Medium** Mix of leather and chain **-4 damage ** **-2 AP** **-2 Dex** || **2 Heavy** Metal mix of chain and metal **-6 damage ** **-3 AP** **-3 Dex** || **3 Full Plate** Basically a tin can **-8 damage ** **-5 AP** **-5 Dex** ||
+|                    | **Min Reach**                 | **Max Reach**                 | **Damage Notes**                 | **Hit**                      | **Crit**                       | **Hit**                             | **Crit**                              | **Hit**                             | **Crit**                             | **Hit**                              | **Crit**                               | **Hit**                            | **Crit**                             |
+| **Light Weapons ** | Small, always one handed (dagger, hand axe, hammer, shuriken, small bow, light spear)          |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
+| **2 AP**           |                               |                               |                                  |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
+| **Stabbing**       | 0                             | 1                             | d4 +1                            | 16                           | 7                              | 15                                  | 14                                    | 14                                  | 18                                   | 13                                   | 19                                     | 20                                 | 20                                   |
+| **Striking**       | 1                             | 2                             | d6                               | 17                           | 13                             | 16                                  | 16                                    | 15                                  | 18                                   | 14                                   | 19                                     | 18                                 | 20                                   |
+| **Blunt**          | 1                             | 3                             | d6 -3 absorb                     | 17                           | 15                             | 16                                  | 17                                    | 15                                  | 18                                   | 14                                   | 19                                     | 18                                 | 20                                   |
+| **Thursting**      | 2                             | 4                             | d4                               | 17                           | 10                             | 16                                  | 16                                    | 15                                  | 17                                   | 13                                   | 18                                     | 19                                 | 20                                   |
+| **Missle**         | D6 -1 to hit per  20ft (4 inches) Min Dex 12                                                   ||| 19                           | 12                             | 18                                  | 18                                    | 19                                  | 15                                   | 20                                   | 20                                     | 20                                 | 20                                   |
+| **Medium Weapons** | Typical size sometimes can be used two handed (bastard sword, battle axe, glaive, spear, mace) |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
+| **3 AP**           |                               |                               |                                  |                              |                                |                                     |                                       |                                     |                                      |                                      |                                        |                                    |                                      |
+| **Striking**       | 2                             | 4                             | D8 +1                            | 15                           | 15                             | 14                                  | 16                                    | 12                                  | 17                                   | 10                                   | 18                                     | 19                                 | 19                                   |
+| **Blunt**          | 2                             | 4                             | d8 -4 absorb                     | 15                           | 15                             | 14                                  | 16                                    | 11                                  | 18                                   | 8                                    | 18                                     | 17                                 | 19                                   |
+| **Thrusting **     | 3                             | 5                             | d8                               | 15                           | 14                             | 14                                  | 15                                    | 12                                  | 16                                   | 10                                   | 16                                     | 18                                 | 19                                   |
+| **Missle **        | D8  -1 to hit per  30ft (6 inches) Min Str 14  Min Dex 14 3 rounds to ready                    ||| 20                           | 11                             | 19                                  | 17                                    | 20                                  | 14                                   | 21                                   | 19                                     | 21                                 | 20                                   |
+| **Heavy Weapons ** | Large awkward always two handed (great sword, great axe, pole arms, giant club)                |||                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
+| **4 AP**           |                               |                               |                                  |                                                                                                                                                                                                                                                                                                                                                                             ||||||||||
+| **Striking**       | 3                             | 5                             | d10                              | 16                           | 14                             | 15                                  | 15                                    | 13                                  | 16                                   | 10                                   | 17                                     | 10                                 | 18                                   |
+| **Blunt**          | 3                             | 5                             | D10 +2 -5 absorb                 | 16                           | 14                             | 15                                  | 15                                    | 12                                  | 17                                   | 8                                    | 17                                     | 6                                  | 18                                   |
+| **Thrusting **     | 4                             | 6                             | d8 +2                            | 16                           | 13                             | 15                                  | 14                                    | 13                                  | 16                                   | 10                                   | 15                                     | 10                                 | 18                                   |
+| **Missle **        | D8 + 2 -1 to hit per  40ft (8 inches) Min Str 15  Min Dex 14  1 turn to ready                  ||| 21                           | 9                              | 20                                  | 15                                    | 20                                  | 13                                   | 21                                   | 17                                     | 21                                 | 18                                   |
 
 ### Notes:
 **Optimal Reach Bonus**
@@ -583,7 +640,7 @@ Shields cost 1 ap
 Modifiers apply to hit and critical rolls 
 
 
-# Experience 
+# Experience
 As characters do things, they are awarded experience points. As these points accumulate the character “goes up in level” and when that happens, the character gets additional fatigue points, hit points, and skill points. You get 1 skill point per sub-level. You roll your fatigue and hit points die when a new level is reached. That number is divided by the number of sub-levels rounded down, and that value is awarded at each sub-level
 
 |       |       |         |
