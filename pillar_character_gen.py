@@ -57,7 +57,7 @@ class Character:
 
         # calculated stats
         self.starting_skill_points = self.physical_base + self.mental_base
-        self.action_point_base = 6 + self.get_physical_attribute_modifiers()
+        self.action_point_base = 3 + (self.mental_base + self.physical_base)/2
         self.hit_points = self.strength + self.constitution
         self.fatigue_points = self.constitution + self.dexterity + self.wisdom
         self.movement = self.strength + self.dexterity + self.constitution
@@ -206,8 +206,15 @@ def print_character(character):
 if __name__ == "__main__":
     dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
     print(dwarf)
-
+    dwarf = Character(RaceTypes.DWARF, BaseTypes.PHYSICAL)
+    print(dwarf)
+    dwarf = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
+    print(dwarf)
     human = Character(RaceTypes.HUMAN, BaseTypes.PHYSICAL)
+    print(human)
+    human = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
+    print(human)
+    human = Character(RaceTypes.ELF, BaseTypes.PHYSICAL)
     print(human)
 
 """
