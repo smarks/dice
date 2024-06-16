@@ -53,8 +53,6 @@
 	  + [Healing Related](#healing-related "Healing Related")
 	  + [Deity Affiliation](#deity-affiliation "Deity Affiliation")
 
-<!-- TOC end -->
-
 # Characters
 A character can be anything. There are no predefined character classes. There are only skills and attributes (characteristics)  which affect how good a character is at specific activities.
 If you find this is too open, character templates are available.
@@ -203,8 +201,6 @@ Skills can anything. If it is not obvious, e.g. Bastard Sword Parry +1, discuss 
 
 If more than skill gives the same bonus, only the skill with the highest bonus is applied.
 
-
-
 ## Hit Points and Fatigue Points
 Fatigue is your endurance. Your energy level. The harder or longer an activity is, the more endurance is required.  The sum of your attributes are your starting fatigue points . Each level add the results of a d6 + the sum of attribute malus or bonus from race (see below) and attributes as you apply your characters constitution malus or bonus to this roll.
 
@@ -255,35 +251,15 @@ Jake has a con 12 and 20 hit points. He loses 35 hit points over the course of a
 ## Character Races
 Currently races include
 
-- **Humans** (wide ranging in all manner of characteristics) Come in a variety of flavors depending on region. No malus or bonuses except by region - see GM for details.
-		examples:
-		- descendant from old empire
-		        - cty dweller
-		                - mountains, Woods
-		                - highlands
+**Humans** (wide ranging in all manner of characteristics) Come in a variety of flavors depending on region. No malus or bonuses except by region - see GM for details.
+examples:
+descendant from old empire, city dweller, mountains, woods, highlands, low lands
 
-- **Elves** 
-		- **Wood** smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. Ill tempered towards any that share their values. constitution +1, wood lore skill +2
-		
-		- **High** Typically taller, more slender than typical humans who don't seem to age. Considered wise and intelligent but often also skilled in various martial arts (in the most general sense of the term). Aloof isolationists. Not often encountered. Sometimes a lone high elf will seek the company of other races.  constitution +2
+**Elves** 
+- Wood Elf smaller and more slender than typical humans, live in the woods as one member of the forest ecosystem. Isolationists. Ill tempered towards any that share their values.  wood lore skill +2 
+- High Elf Typically taller, more slender than typical humans who don't seem to age. Considered wise and intelligent but haughty and aloof.  Often also skilled in various martial arts (in the most general sense of the term). Aloof isolationists. Not often encountered. Sometimes a lone high elf will seek the company of other races.  constitution +2
 
-- **Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1, strength +1, -1 dex, -1 personality +1 craftsmanship
-
-- **Gnomes** Similar to dwarves but lesser in all respects including their dislike for other races and direct opposite in disposition to their cousins the dwarves. Note: dwarves typically  look down about Gnomes while Gnomes typically roll their eyes at their less gregarious cousins. Beards are typical for males, but not always worn. Female Gnomes are obvious. constitution +1, strength +1,  intelligence or wisdom +1
-
-Draft —
-- **Fae**  A magical folk who typically keep to themselves but sometimes venture into human society either out of curiosity or perhaps a Geas. Malus and bonuses vary - see games master.
-
-- **Small Folk** Not Hobbits, Not halflings, humanoids of dominative statue, not as stout as Dwarves but more nimble and clever. Not worldly. Isolationist. Rarely encountered. Sometimes mixed up with gnomes to neither their or the Gnomes amusement. str -2, dex +1, per +1
-
-- \*\*Hill People \*\*  rough, doughty, ill tempered, focus on the physical and the mental less so. Typical do not mix well with other races living in wild and untamed places. Str +2, con +2, dex + 1, personality -3, intelligence or wisdom -1
-
-- \*\*Snake People \*\* Clearly a race of being far different than other humanoids. Also called Lizard Men and Dragon Spawn. Some say they are result of a fae and dragon coupling although there is only vague speculation on that would really work. Given the different natures of each. Snake people are generally taller, and heavier than other races including all but the most robust Hill people, but there are also variations. In one extreme, a snake person can appear extremely lizard like in skin texture and pattern and claw like hands and feet to the other extreme where they present as shallow skinned humans.  Some say these physical manifestations are phases in their growth while others speculate that there are different classes of Snake People.
-
-		Often viewed by other races as haughty bullies and sometimes thuggish.  They do possess superior mental and physical attributes.  Amongst themselves they subscribe to a strong well formulated cultural and political hierarchy which is largely opaque to outsiders.  Snake people rarely go mingle with other races, when they do, it is typically because an individual has either been ostracized from their community or completing an initiation rite that entails learning about as much as they can from outside of their community. There communities themselves are typically secreted away and not accessible to outsiders. The old empire was said to be organized and run by a  Cabal of Snake people  but that was in the distant past, and certainly the old empire's population and those that are considered descendants of the old empire are humans. 
-		
-		Attribute modifiers are not public
---
+**Dwarves** The best artisans.  Doughty warriors when roused. Always bearded and often cranky. Intolerant isolationists. Female Dwarves are a mystery. constitution +1 craftsmanship
 
 # Character Generation
 ### Pick a race
@@ -353,6 +329,7 @@ Starting Skill Points: 11
 Total Skill Points: 11 
 Action Points (before skill modifier) 6 
 Movement: 29 
+
 ### Starting skill points
 Add physical and mental base to get your starting skill points.
 You can use these points for skills but one type of skill is increasing your character attributes. The skill point cost for increasing character attributes works a bit different than most other skills. Here's how it differs.
@@ -405,45 +382,97 @@ You spend 8 skill points  to get to Str 14
 Every character has action points. Action points allow a character to do something when the game is a turned based mode.
 
 (The game becomes turned based when individual actions matter).
+Todo 
+ Characters start with 6 AP, add attribute and skill bonuses/malus, and subtract armor and shield encumbrance.
 
-\*\* Characters start with 6 AP, add attribute and skill bonuses/malus, and subtract armor and shield encumbrance.
-
-When the game becomes turns based, each player rolls a d6/2 round down and adds that value to their total number of action points.
+When the game becomes turns based, each player rolls a d4 and adds that value to their total number of action points.
 That number is their initiative roll.
+
+
 The first turn proceeds with the character who has the highest initiative roll.
+
 Action with characters with tied initiative roll happen simultaneously.
+
 Subsequent turn order is determined by total action points, The character with the most points goes first etc. (the initiative roll is only used to determine who goes first on the first term.) 
 
 If characters act simultaneously and they each choose action the whose outcome is effected by the other characters ‘state’ then the character with the high dex gets the advantage if characters have the same dex both players roll a d20 until one player rolls higher then the other player. 
+
 Here’s an example:
+
 Two characters go simultaneously
+
 One chooses to step closed, the other chooses to strike.  
+
 At what range does the strike occur, the range before the step or the range after?
+
 If the character striking has the higher dex, (or equal dex and rolls higher on a d20) the strike at the range they prefer, 
+
 If the character striking has a lower dex (or equal dex and rolls lower on a d20) they strike at the range preferred by the character who is stepping close, 
 If after the simultaneous original action,, both characters have the same number of action points, the next action is also simultaneous.
 
-The character with the highest AP goes first. They can use as many Action Points as they wish until their number of action points is equal or lower than the next highest character.(if equal and they choose to use an AP the action is simultaneous.
+When combat begins, the game is said to one in Turn based mode. 
+
+**Turn One**
+
+At the beginning of the first turn, characters range are +1 of max range of the longest reach weapon. 
 
 e.g.
-Fred has 8 points and rolls a d6 gets 1  / 2 round down for a 0 modifier for initiative roll and end up with an 8 for initiative
-Joe has 6 and rolls a d6 gets 6 /2 for 3 additional initiative points for a total of nine 9 for initiative
-Fran as 4 and rolls a d6 gets 5 /2 round down 2  for a total of  6 initiative points.
 
-Joe goes first. He spends 2 for a light weapon attack. He is at 4 points now. ( 2 - total action points of 6 = 4)
-Fred is at 8 so he can parry and he does for -1. Now he's at 7 and has the most points. He can swing for 2 at Joe. Now he is at 5 and Joe is at 4. Joe can't do anything yet.
-Fran has the most points so she can spend 2 and swing at Joe. Now she's at 4 and Joe is at 4. He can parry Fran. He does. Now he's at 3.
-Fran is at 4
-Joe is at 4 3
-Fred is at 5
-Fred goes. He swings at Fran. He's at 3 now. Fran is at 4 - she spends 1 to parry She's at 3 now.
-Joe is at 3
-Fran is at 3
-Fred is at 3
-Everyone goes at the same time.
+Jonas a greatsworder who AP of 8  and Pete who wields a broadsword and 7 AP  face off. 
 
+Jonas has the longest weapon, a great sword with a max reach of 5. In this situation, characters would start at range 6. 
+ 
+The character with the highest AP + initiative roll goes first. Jonas has the highest AP so he goes first. He can use up to many AP points as available to  do single acton
+** Round One**
 
-### Movement
+A round is a unit where all characters have the opportunity to spend APs to do something. 
+
+Jonas decides to step close. Spending 1 AP bringing the range to 5. He spends a fatigue as well. He's now at 7 AP
+
+Next. the remaining characters, in this case Pet can **react** to that action, by spending up to as many AP as available to do a single non offensive action. If it matters, the order the characters react in goes from lowest AP to highest.   
+
+Pete decides to circle close. He spends 1 AP rolls successfully and closes by 2. The range is now 3. He has 5 AP remaining and has spent 1 fatigue 
+
+Both characters use APs thus ending the **round**. 
+
+Both characters have AP remaining so the **turn** continues. The turn will end when all characters have either passed or exhausted their pool of action points. 
+
+**Round Two**
+
+Jonas decides to swing. He spends 4 action points leaving him with 3 remaining. He spends 4 fatigue to do this. 
+Now, Pete can react or do nothing. If he reacts he can choose to parry spending 2 AP leaving him with 4. He decides to do that. 
+
+He successfully parry's Jonas attack. He spends 2 fatigue and 4 AP. 
+
+Both characters have expended AP and performed an action thus ending the round. 
+
+Both characters have AP remaining so the turn continues
+
+**Round Three**
+
+Now, Pete has initiative being at 4 AP to Jonas' 3. He decides to step close which would bring the range to 2 making it harder for Jonas to hit him. He spends 1 AP to step close. The range is now 2. He has 3 AP remaining and has spent another fatigue point. 
+
+Jonas chooses react and attempts to circle open spending 2 points. He rolls exactly what he needs so that the range is only increased by 1. He spends 2 fatigue to that and 2 action points. He has 1 left. Range is 3. 
+
+Both characters have expended AP and performed an action thus ending the round. 
+
+Both characters have AP remaining so the turn continues
+
+**Round Four**
+
+Both characters have 1 AP remaining. Pete has the dex so he goes first. **He passes spending no fatigue but one AP.  **
+Jonas passes as well spending no fatigue but one AP. 
+
+Neither character have remaining AP so the turn ends. 
+
+**Turn Two"**
+**Round One"**
+Both characters get all their AP back. Jonas is 8 Pete is at 7. The range is 3
+...
+
+ 
+
+### Movement. Todo 
 If you are out striking distance of opponent you can disengage which costs 1. On next initiative you can use full movement to move. However, any enemy spend all their actions to close and strike. If you decide to use an AP to defend yourselfx` lose the  disengage`
 
 
